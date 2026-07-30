@@ -53,10 +53,8 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
 .post-ava{width:38px;height:38px;border-radius:50%;flex-shrink:0;overflow:hidden;border:1px solid rgba(200,16,46,.4);background:#fff;display:flex;align-items:center;justify-content:center}
 .post-ava img{width:78%;height:auto;object-fit:contain;display:block}
 .post-plat{margin-left:auto;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#F26173;border:1px solid rgba(200,16,46,.45);border-radius:5px;padding:3px 8px}
-.post-media{background:#fff;border-block:1px solid rgba(255,255,255,.08);overflow:hidden;line-height:0;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center}
+.post-media{background:#fff;border-block:1px solid rgba(255,255,255,.08);overflow:hidden;line-height:0;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center}
 .post-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.34,1.3,.64,1)}
-.post-media.contain{background:linear-gradient(160deg,#FFFFFF,#EFEFEF)}
-.post-media.contain img{object-fit:contain;padding:14px}
 .post-card:hover .post-media img{transform:scale(1.05)}
 .pname{font-size:12px;font-weight:700;color:#fff;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .phandle{font-size:10px;color:rgba(255,255,255,.42);line-height:1.2}
@@ -243,97 +241,54 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
         <span class="bchip" style="color:#96091F"><span class="dot"></span>Always-On Presence</span>
       </div>
     </div>
-
-    <!-- 12 sample posts · 4-column grid -->
+    <!-- 6 campaign creatives · 3-column grid -->
     <div class="relative reveal">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mt-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
 
         <div class="post-card tilt shine">
           <div class="post-head"><div class="post-ava"><img src="assets/logo/convotherm-color.svg" alt="Convotherm"></div><div class="flex-1 min-w-0"><p class="pname">Convotherm</p><p class="phandle">Sponsored</p></div><span class="post-plat">LinkedIn</span></div>
-          <div class="post-media"><img src="assets/lifestyle/baking.jpg" alt="Baking in the Convotherm maxx" loading="lazy"></div>
-          <p class="post-cap">BakePro turns one oven into a bakery. <b>#ConvothermMaxx</b></p>
+          <div class="post-media"><img src="assets/creatives/1.jpg" alt="Convotherm maxx pro — combi ovens for those who need more" loading="lazy"></div>
+          <p class="post-cap">Not too much, not too little. German engineering for a surprisingly small price. <b>#maxxpro</b></p>
           <div class="post-foot"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M20.8 8.6a5.5 5.5 0 00-9.8-3.4A5.5 5.5 0 003.2 8.6c0 4.3 8.3 9.9 8.8 9.9s8.8-5.6 8.8-9.9z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 12v8h16v-8M16 6l-4-4-4 4M12 2v14"/></svg></div>
         </div>
 
         <div class="post-card tilt shine">
           <div class="post-head"><div class="post-ava"><img src="assets/logo/convotherm-color.svg" alt="Convotherm"></div><div class="flex-1 min-w-0"><p class="pname">Convotherm</p><p class="phandle">2h · Sponsored</p></div><span class="post-plat">Instagram</span></div>
-          <div class="post-media contain"><img src="assets/product/maxx-6-10.png" alt="Convotherm maxx 6.10" loading="lazy"></div>
-          <p class="post-cap">Meet the maxx 6.10. Small footprint, full toolkit. <b>#maxxJustRight</b></p>
-          <div class="post-foot"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M20.8 8.6a5.5 5.5 0 00-9.8-3.4A5.5 5.5 0 003.2 8.6c0 4.3 8.3 9.9 8.8 9.9s8.8-5.6 8.8-9.9z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 12v8h16v-8M16 6l-4-4-4 4M12 2v14"/></svg></div>
-        </div>
-
-        <div class="post-card tilt shine">
-          <div class="post-head"><div class="post-ava"><img src="assets/logo/convotherm-color.svg" alt="Convotherm"></div><div class="flex-1 min-w-0"><p class="pname">Convotherm</p><p class="phandle">Sponsored</p></div><span class="post-plat">Instagram</span></div>
-          <div class="post-media"><img src="assets/lifestyle/vegetables.jpg" alt="Steamed vegetables from the Convotherm maxx" loading="lazy"></div>
-          <p class="post-cap">HumidityPro keeps vegetables bright, never soggy. <b>#SelfClimateControl</b></p>
-          <div class="post-foot"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M20.8 8.6a5.5 5.5 0 00-9.8-3.4A5.5 5.5 0 003.2 8.6c0 4.3 8.3 9.9 8.8 9.9s8.8-5.6 8.8-9.9z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 12v8h16v-8M16 6l-4-4-4 4M12 2v14"/></svg></div>
-        </div>
-
-        <div class="post-card tilt shine">
-          <div class="post-head"><div class="post-ava"><img src="assets/logo/convotherm-color.svg" alt="Convotherm"></div><div class="flex-1 min-w-0"><p class="pname">Convotherm</p><p class="phandle">1d · Sponsored</p></div><span class="post-plat">LinkedIn</span></div>
-          <div class="post-media"><img src="assets/lifestyle/meat.jpg" alt="Roast meat cooked in the Convotherm maxx" loading="lazy"></div>
-          <p class="post-cap">Crisp&amp;Tasty: the finish your guests remember. <b>#QualityManagement</b></p>
-          <div class="post-foot"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M20.8 8.6a5.5 5.5 0 00-9.8-3.4A5.5 5.5 0 003.2 8.6c0 4.3 8.3 9.9 8.8 9.9s8.8-5.6 8.8-9.9z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 12v8h16v-8M16 6l-4-4-4 4M12 2v14"/></svg></div>
-        </div>
-
-        <div class="post-card tilt shine">
-          <div class="post-head"><div class="post-ava"><img src="assets/logo/convotherm-color.svg" alt="Convotherm"></div><div class="flex-1 min-w-0"><p class="pname">Convotherm</p><p class="phandle">Sponsored</p></div><span class="post-plat">Instagram</span></div>
-          <div class="post-media"><img src="assets/lifestyle/fish.jpg" alt="Fish cooked in the Convotherm maxx" loading="lazy"></div>
-          <p class="post-cap">Delicate fish, consistent every service. <b>#AirflowManagement</b></p>
-          <div class="post-foot"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M20.8 8.6a5.5 5.5 0 00-9.8-3.4A5.5 5.5 0 003.2 8.6c0 4.3 8.3 9.9 8.8 9.9s8.8-5.6 8.8-9.9z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 12v8h16v-8M16 6l-4-4-4 4M12 2v14"/></svg></div>
-        </div>
-
-        <div class="post-card tilt shine">
-          <div class="post-head"><div class="post-ava"><img src="assets/logo/convotherm-color.svg" alt="Convotherm"></div><div class="flex-1 min-w-0"><p class="pname">Convotherm</p><p class="phandle">3h · Sponsored</p></div><span class="post-plat">Instagram</span></div>
-          <div class="post-media contain"><img src="assets/product/maxx-10-10.png" alt="Convotherm maxx 10.10" loading="lazy"></div>
-          <p class="post-cap">maxx 10.10 — one extra shelf, a whole extra gear. <b>#Tabletop</b></p>
+          <div class="post-media"><img src="assets/creatives/2.jpg" alt="Convotherm maxx pro easyTouch 10.10 tabletop combi oven" loading="lazy"></div>
+          <p class="post-cap">easyTouch 10.10 — tabletop footprint, full touchscreen control. <b>#Tabletop</b></p>
           <div class="post-foot"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M20.8 8.6a5.5 5.5 0 00-9.8-3.4A5.5 5.5 0 003.2 8.6c0 4.3 8.3 9.9 8.8 9.9s8.8-5.6 8.8-9.9z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 12v8h16v-8M16 6l-4-4-4 4M12 2v14"/></svg></div>
         </div>
 
         <div class="post-card tilt shine">
           <div class="post-head"><div class="post-ava"><img src="assets/logo/convotherm-color.svg" alt="Convotherm"></div><div class="flex-1 min-w-0"><p class="pname">Convotherm</p><p class="phandle">Sponsored</p></div><span class="post-plat">LinkedIn</span></div>
-          <div class="post-media"><img src="assets/mgmt/managements.png" alt="Convotherm Function Managements" loading="lazy"></div>
-          <p class="post-cap">Four Function Managements. One oven that thinks ahead. <b>#GermanEngineering</b></p>
+          <div class="post-media"><img src="assets/creatives/3.jpg" alt="Convotherm maxx — built for 7PM on a Saturday event" loading="lazy"></div>
+          <p class="post-cap">Four details that only matter under pressure. <b>#ServiceReady</b></p>
+          <div class="post-foot"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M20.8 8.6a5.5 5.5 0 00-9.8-3.4A5.5 5.5 0 003.2 8.6c0 4.3 8.3 9.9 8.8 9.9s8.8-5.6 8.8-9.9z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 12v8h16v-8M16 6l-4-4-4 4M12 2v14"/></svg></div>
+        </div>
+
+        <div class="post-card tilt shine">
+          <div class="post-head"><div class="post-ava"><img src="assets/logo/convotherm-color.svg" alt="Convotherm"></div><div class="flex-1 min-w-0"><p class="pname">Convotherm</p><p class="phandle">1d · Sponsored</p></div><span class="post-plat">Instagram</span></div>
+          <div class="post-media"><img src="assets/creatives/4.jpg" alt="Convotherm maxx pro easyTouch 20.20 floor-standing combi oven" loading="lazy"></div>
+          <p class="post-cap">easyTouch 20.20 — floor-standing volume, same one-touch workflow. <b>#FloorStanding</b></p>
           <div class="post-foot"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M20.8 8.6a5.5 5.5 0 00-9.8-3.4A5.5 5.5 0 003.2 8.6c0 4.3 8.3 9.9 8.8 9.9s8.8-5.6 8.8-9.9z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 12v8h16v-8M16 6l-4-4-4 4M12 2v14"/></svg></div>
         </div>
 
         <div class="post-card tilt shine">
           <div class="post-head"><div class="post-ava"><img src="assets/logo/convotherm-color.svg" alt="Convotherm"></div><div class="flex-1 min-w-0"><p class="pname">Convotherm</p><p class="phandle">5h · Sponsored</p></div><span class="post-plat">Instagram</span></div>
-          <div class="post-media contain"><img src="assets/product/maxx-20-10.png" alt="Convotherm maxx 20.10" loading="lazy"></div>
-          <p class="post-cap">NEW: maxx 20.10 floor-standing. Bigger demands, same precision. <b>#New</b></p>
+          <div class="post-media"><img src="assets/creatives/5.jpg" alt="Best of Convotherm maxx pro" loading="lazy"></div>
+          <p class="post-cap">Automatic cooking, rapid dehumidification, one screen. <b>#BestOfMaxxPro</b></p>
           <div class="post-foot"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M20.8 8.6a5.5 5.5 0 00-9.8-3.4A5.5 5.5 0 003.2 8.6c0 4.3 8.3 9.9 8.8 9.9s8.8-5.6 8.8-9.9z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 12v8h16v-8M16 6l-4-4-4 4M12 2v14"/></svg></div>
         </div>
 
         <div class="post-card tilt shine">
-          <div class="post-head"><div class="post-ava"><img src="assets/logo/convotherm-color.svg" alt="Convotherm"></div><div class="flex-1 min-w-0"><p class="pname">Convotherm</p><p class="phandle">Sponsored</p></div><span class="post-plat">Instagram</span></div>
-          <div class="post-media"><img src="assets/lifestyle/service-team.jpg" alt="Convotherm service partner" loading="lazy"></div>
-          <p class="post-cap">A worldwide service network, on call. <b>#AlwaysAtHand</b></p>
-          <div class="post-foot"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M20.8 8.6a5.5 5.5 0 00-9.8-3.4A5.5 5.5 0 003.2 8.6c0 4.3 8.3 9.9 8.8 9.9s8.8-5.6 8.8-9.9z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 12v8h16v-8M16 6l-4-4-4 4M12 2v14"/></svg></div>
-        </div>
-
-        <div class="post-card tilt shine">
-          <div class="post-head"><div class="post-ava"><img src="assets/logo/convotherm-color.svg" alt="Convotherm"></div><div class="flex-1 min-w-0"><p class="pname">Convotherm</p><p class="phandle">1d · Sponsored</p></div><span class="post-plat">LinkedIn</span></div>
-          <div class="post-media"><img src="assets/lifestyle/service-design.jpg" alt="Service-friendly design of the Convotherm maxx" loading="lazy"></div>
-          <p class="post-cap">Two service ports. Online diagnostics. Less downtime. <b>#ServiceFriendly</b></p>
-          <div class="post-foot"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M20.8 8.6a5.5 5.5 0 00-9.8-3.4A5.5 5.5 0 003.2 8.6c0 4.3 8.3 9.9 8.8 9.9s8.8-5.6 8.8-9.9z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 12v8h16v-8M16 6l-4-4-4 4M12 2v14"/></svg></div>
-        </div>
-
-        <div class="post-card tilt shine">
-          <div class="post-head"><div class="post-ava"><img src="assets/logo/convotherm-color.svg" alt="Convotherm"></div><div class="flex-1 min-w-0"><p class="pname">Convotherm</p><p class="phandle">Sponsored</p></div><span class="post-plat">Instagram</span></div>
-          <div class="post-media contain"><img src="assets/product/maxx-20-20.png" alt="Convotherm maxx 20.20" loading="lazy"></div>
-          <p class="post-cap">maxx 20.20 — volume without compromise. <b>#FloorStanding</b></p>
-          <div class="post-foot"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M20.8 8.6a5.5 5.5 0 00-9.8-3.4A5.5 5.5 0 003.2 8.6c0 4.3 8.3 9.9 8.8 9.9s8.8-5.6 8.8-9.9z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 12v8h16v-8M16 6l-4-4-4 4M12 2v14"/></svg></div>
-        </div>
-
-        <div class="post-card tilt shine">
-          <div class="post-head"><div class="post-ava"><img src="assets/logo/convotherm-color.svg" alt="Convotherm"></div><div class="flex-1 min-w-0"><p class="pname">Convotherm</p><p class="phandle">6h · Sponsored</p></div><span class="post-plat">Instagram</span></div>
-          <div class="post-media"><img src="assets/lifestyle/cost.jpg" alt="Cost optimisation with the Convotherm maxx" loading="lazy"></div>
-          <p class="post-cap">ConvoClean: fully automatic, kinder on water and power. <b>#CleaningManagement</b></p>
+          <div class="post-head"><div class="post-ava"><img src="assets/logo/convotherm-color.svg" alt="Convotherm"></div><div class="flex-1 min-w-0"><p class="pname">Convotherm</p><p class="phandle">Sponsored</p></div><span class="post-plat">LinkedIn</span></div>
+          <div class="post-media"><img src="assets/creatives/6.jpg" alt="Experience the future of cooking with Convotherm" loading="lazy"></div>
+          <p class="post-cap">Experience the future of cooking with Convotherm. <b>#FutureOfCooking</b></p>
           <div class="post-foot"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M20.8 8.6a5.5 5.5 0 00-9.8-3.4A5.5 5.5 0 003.2 8.6c0 4.3 8.3 9.9 8.8 9.9s8.8-5.6 8.8-9.9z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 12v8h16v-8M16 6l-4-4-4 4M12 2v14"/></svg></div>
         </div>
 
       </div>
-      <p class="ph-cap">Sample posts built from Convotherm's own maxx imagery — 12 concepts across LinkedIn and Instagram</p>
+      <p class="ph-cap">Sample campaign creatives for the maxx and maxx pro range — 6 posts across LinkedIn and Instagram</p>
     </div>
   </div>
 </section>
