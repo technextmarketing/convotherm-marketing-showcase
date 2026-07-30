@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Marketing Research — Convotherm maxx | TechNext</title>
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#141414','mid':'#1C1C1C'},brand:{'DEFAULT':'#C8102E','light':'#E12742','pale':'#F26173'},chalk:{'DEFAULT':'#F7F7F7','dark':'#EFEFEF','deeper':'#E4E4E4'}},fontFamily:{display:['Open Sans','system-ui','sans-serif'],body:['Open Sans','system-ui','sans-serif']}}}}
+</script>
+<link rel="stylesheet" href="styles.css?v=1"/>
+<style>
+/* ── Page-specific ── */
+.mr-hero{background:linear-gradient(160deg,#050505 0%,#141414 50%,#0A0A0A 100%);min-height:48vh;display:flex;align-items:center;padding:120px 24px 72px;position:relative;overflow:hidden}
+.mr-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 50% 0%,rgba(200,16,46,.14) 0%,transparent 65%);pointer-events:none}
+
+.mr-h{font-family:'Open Sans',sans-serif;font-weight:800;font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.08;letter-spacing:-.015em}
+.mr-eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;font-weight:700}
+
+/* Stat tiles */
+.stat-tile{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:22px;text-align:center}
+.stat-tile .n{font-family:'Open Sans',sans-serif;font-weight:800;letter-spacing:-.03em;font-size:2.1rem;color:#F26173;line-height:1;display:block}
+.stat-tile .l{font-size:.7rem;color:rgba(255,255,255,.45);letter-spacing:.06em;text-transform:uppercase;margin-top:8px;display:block;line-height:1.5}
+
+/* Channel presence cards */
+.chan-card{position:relative;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:22px;transition:transform .4s cubic-bezier(.34,1.4,.64,1),border-color .3s ease,box-shadow .4s ease}
+.chan-card:hover{transform:translateY(-4px);border-color:rgba(200,16,46,.5);box-shadow:0 16px 40px rgba(0,0,0,.45)}
+.chan-ic{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;background:rgba(200,16,46,.1);border:1px solid rgba(200,16,46,.3)}
+.chan-status{position:absolute;top:20px;right:20px;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;padding:4px 9px;border-radius:6px}
+.st-live{color:#8fdcaa;background:rgba(120,200,150,.12);border:1px solid rgba(120,200,150,.32)}
+.st-weak{color:#e7c98a;background:rgba(230,190,90,.1);border:1px solid rgba(230,190,90,.3)}
+.st-none{color:#F26173;background:rgba(200,16,46,.12);border:1px solid rgba(200,16,46,.4)}
+.chan-name{font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:3px}
+.chan-meta{font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.6}
+.chan-handle{font-size:.72rem;color:#F26173;margin-top:8px;word-break:break-all}
+
+/* Score meter */
+.meter{height:12px;border-radius:8px;background:rgba(255,255,255,.07);overflow:hidden}
+.meter-fill{height:100%;border-radius:8px;background:linear-gradient(90deg,#C8102E,#F26173);width:0;transition:width 1.4s cubic-bezier(.2,.7,.3,1)}
+.in-view .meter-fill{width:var(--w)}
+
+/* Opportunity cards */
+.opp-card{background:rgba(200,16,46,.05);border:1px solid rgba(200,16,46,.2);border-radius:16px;padding:26px;transition:transform .4s cubic-bezier(.34,1.4,.64,1),box-shadow .4s ease,border-color .3s ease}
+.opp-card:hover{transform:translateY(-5px);box-shadow:0 18px 44px rgba(0,0,0,.4);border-color:rgba(200,16,46,.55)}
+.opp-num{font-family:'Open Sans',sans-serif;font-weight:800;letter-spacing:-.03em;font-size:2.1rem;color:rgba(200,16,46,.4);line-height:1}
+
+/* Fact row */
+.fact-row{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.fact-row:last-child{border-bottom:none}
+.fact-k{font-size:.82rem;color:rgba(255,255,255,.5);flex-shrink:0}
+.fact-v{font-size:.86rem;color:#fff;text-align:right;font-weight:500}
+
+.src{display:inline-block;font-size:.68rem;color:rgba(242,97,115,.75);border:1px solid rgba(200,16,46,.3);border-radius:4px;padding:2px 7px;margin-left:4px;vertical-align:middle}
+.callout{background:linear-gradient(135deg,rgba(200,16,46,.1),rgba(200,16,46,.03));border-left:3px solid #C8102E;border-radius:0 12px 12px 0;padding:16px 22px;margin:24px 0}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:6px 14px;border-radius:99px;margin:0 6px 8px 0;border:1px solid rgba(200,16,46,.35)}
+.srclist a{color:#F26173;text-decoration:underline;text-underline-offset:2px}
+.srclist li{font-size:.82rem;color:rgba(255,255,255,.55);padding:6px 0}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<div id="cursor-glow"></div>
+<button id="toTop" aria-label="Back to top"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg></button>
+
+<!-- NAV -->
+<nav class="fixed top-0 left-0 right-0 z-50 px-6 lg:px-12 py-4" id="nav" style="background:rgba(10,10,10,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.12)">
+  <div class="max-w-6xl mx-auto flex items-center justify-between relative">
+    <a href="https://www.convotherm.com/combiovens/maxx" target="_blank" rel="noopener" style="text-decoration:none;display:flex;align-items:center">
+      <img src="assets/logo/convotherm-white.svg" alt="Convotherm" style="height:30px;width:auto">
+    </a>
+    <div id="navLinks" class="flex items-center gap-4 md:gap-8">
+      <a href="index.html" class="nav-page">Showcase</a>
+      <a href="market-research.html" class="nav-page nav-current">Marketing Research</a>
+    </div>
+    <button id="navToggle" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="mr-hero">
+  <div class="grid-field" style="opacity:.1"></div>
+  <div class="max-w-5xl mx-auto w-full relative z-10">
+    <div class="hero-badge-pill reveal" style="margin-bottom:20px">
+      <span class="badge-dot"></span>
+      Marketing Research · Market &amp; Channel Context
+    </div>
+    <h1 class="text-white mr-h mb-5 reveal">
+      The Convotherm maxx<br>
+      <em class="not-italic orange-anim">Opportunity, Mapped</em>
+    </h1>
+    <p class="text-white/60 max-w-2xl reveal" style="font-size:1.1rem;line-height:1.8">
+      The market context behind the three-pillar showcase — how fast the combi oven category is growing, who the maxx is up against, and where a value-premium German brand wins attention online.
+    </p>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 reveal">
+      <div class="stat-tile"><span class="n">$2.14B</span><span class="l">Commercial combi oven market, 2026</span></div>
+      <div class="stat-tile"><span class="n">8.98%</span><span class="l">CAGR to 2031</span></div>
+      <div class="stat-tile"><span class="n">10.9%</span><span class="l">Asia-Pacific CAGR — fastest region</span></div>
+      <div class="stat-tile"><span class="n">4</span><span class="l">maxx models to take to market</span></div>
+    </div>
+    <p class="text-white/35 text-[11px] mt-5 reveal">Market figures: Mordor Intelligence and Persistence Market Research, 2026 editions. Full sources at the foot of this page.</p>
+  </div>
+</section>
+
+<!-- 01 MARKET CONTEXT -->
+<section id="market" class="py-24 px-6" style="background:#0A0A0A">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-14 reveal">
+      <p class="label-ornament mr-eyebrow mb-4" style="color:#F26173">01 · Market Context</p>
+      <h2 class="text-white mr-h mb-4" style="font-size:clamp(1.8rem,3.5vw,2.8rem)">A Category Growing Faster Than the Kitchens It Serves</h2>
+      <div class="orange-bar mx-auto mb-5"></div>
+      <p class="text-white/55 max-w-2xl mx-auto" style="font-size:1rem">Combi ovens are no longer a premium indulgence — energy cost, labour shortage and menu flexibility are pushing them into mid-market kitchens. That is precisely the buyer the maxx was designed for.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div class="panel panel-d reveal-l">
+        <p class="mr-eyebrow mb-6" style="color:#F26173">Market Size · USD Billions</p>
+        <div class="bars">
+          <div class="bar"><i style="--h:41%"></i><b class="text-white">$2.04B</b><small class="text-white/60">2025</small></div>
+          <div class="bar"><i style="--h:43%"></i><b class="text-white">$2.14B</b><small class="text-white/60">2026</small></div>
+          <div class="bar"><i style="--h:52%"></i><b class="text-white">$2.6B</b><small class="text-white/60">2028e</small></div>
+          <div class="bar"><i style="--h:66%"></i><b class="text-white">$3.29B</b><small class="text-white/60">2031e</small></div>
+        </div>
+        <p class="chart-note text-white">Mordor Intelligence · commercial combi ovens, 2026 edition <span class="src">S1</span></p>
+      </div>
+
+      <div class="panel panel-d reveal-r">
+        <p class="mr-eyebrow mb-6" style="color:#F26173">What's Driving the Growth</p>
+        <div class="hbars">
+          <div>
+            <div class="hb-top"><span class="text-white/80">Energy &amp; running-cost pressure</span><span class="text-white/50">Primary driver</span></div>
+            <div class="hb-track"><div class="hb-fill" style="--w:92%"></div></div>
+          </div>
+          <div>
+            <div class="hb-top"><span class="text-white/80">Labour shortage → automation</span><span class="text-white/50">High</span></div>
+            <div class="hb-track"><div class="hb-fill" style="--w:84%"></div></div>
+          </div>
+          <div>
+            <div class="hb-top"><span class="text-white/80">QSR &amp; snack-business expansion</span><span class="text-white/50">High</span></div>
+            <div class="hb-track"><div class="hb-fill" style="--w:78%"></div></div>
+          </div>
+          <div>
+            <div class="hb-top"><span class="text-white/80">Hygiene &amp; auto-cleaning compliance</span><span class="text-white/50">Moderate</span></div>
+            <div class="hb-track"><div class="hb-fill" style="--w:64%"></div></div>
+          </div>
+          <div>
+            <div class="hb-top"><span class="text-white/80">Connected-kitchen &amp; data management</span><span class="text-white/50">Emerging</span></div>
+            <div class="hb-track"><div class="hb-fill" style="--w:52%"></div></div>
+          </div>
+        </div>
+        <p class="chart-note text-white">Relative weighting from published market-driver commentary <span class="src">S1 S2 S3</span></p>
+      </div>
+    </div>
+
+    <div class="callout reveal">
+      <p class="text-white/80" style="font-size:1rem;line-height:1.8">
+        Every one of those drivers already has a maxx answer — <strong style="color:#F26173">ConvoClean</strong>, <strong style="color:#F26173">Press&amp;Go</strong>, <strong style="color:#F26173">energy-efficient glazing</strong>, <strong style="color:#F26173">WiFi/LAN connectivity</strong>. The gap is not the product. It is how often the market hears about it.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 02 COMPETITIVE SET -->
+<section id="competitors" class="py-24 px-6" style="background:#F7F7F7">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-14 reveal">
+      <p class="label-ornament mr-eyebrow mb-4" style="color:#C8102E">02 · Competitive Set</p>
+      <h2 class="mr-h mb-4" style="font-size:clamp(1.8rem,3.5vw,2.8rem);color:#1A1A1A">Who the maxx Is Compared Against</h2>
+      <div class="orange-bar mx-auto mb-5"></div>
+      <p class="max-w-2xl mx-auto" style="color:#444444;font-size:1rem">Named alongside Convotherm in every major market report: Rational, Electrolux Professional, Unox and Alto-Shaam. Each owns a story. The maxx needs its own told just as loudly.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="panel panel-l reveal-l">
+        <p class="mr-eyebrow mb-5" style="color:#C8102E">The Positioning Field</p>
+        <div class="hbars">
+          <div>
+            <div class="hb-top"><span style="color:#1A1A1A;font-weight:600">Rational</span><span style="color:#666">Category default · heaviest share of voice</span></div>
+            <div class="hb-track"><div class="hb-fill" style="--w:94%"></div></div>
+          </div>
+          <div>
+            <div class="hb-top"><span style="color:#1A1A1A;font-weight:600">Electrolux Professional</span><span style="color:#666">Full-kitchen systems play</span></div>
+            <div class="hb-track"><div class="hb-fill" style="--w:74%"></div></div>
+          </div>
+          <div>
+            <div class="hb-top"><span style="color:#1A1A1A;font-weight:600">Unox</span><span style="color:#666">Loud, digital-first, price-aggressive</span></div>
+            <div class="hb-track"><div class="hb-fill" style="--w:70%"></div></div>
+          </div>
+          <div>
+            <div class="hb-top"><span style="color:#1A1A1A;font-weight:600">Convotherm (maxx)</span><span style="color:#666">German engineering at a value price</span></div>
+            <div class="hb-track"><div class="hb-fill" style="--w:58%"></div></div>
+          </div>
+          <div>
+            <div class="hb-top"><span style="color:#1A1A1A;font-weight:600">Alto-Shaam</span><span style="color:#666">Niche / specialty cooking</span></div>
+            <div class="hb-track"><div class="hb-fill" style="--w:44%"></div></div>
+          </div>
+        </div>
+        <p class="chart-note" style="color:#666">Relative share-of-voice estimate, not unit market share. Brand set per Mordor Intelligence <span class="src" style="color:#C8102E">S1</span></p>
+      </div>
+
+      <div class="panel panel-l reveal-r">
+        <p class="mr-eyebrow mb-5" style="color:#C8102E">The maxx Argument</p>
+        <div style="border-top:1px solid rgba(0,0,0,.07)">
+          <div class="fact-row" style="border-bottom-color:rgba(0,0,0,.07)"><span class="fact-k" style="color:#666">Brand promise</span><span class="fact-v" style="color:#1A1A1A">"maxx. just right."</span></div>
+          <div class="fact-row" style="border-bottom-color:rgba(0,0,0,.07)"><span class="fact-k" style="color:#666">Core claim</span><span class="fact-v" style="color:#1A1A1A">German engineering for a surprisingly small price</span></div>
+          <div class="fact-row" style="border-bottom-color:rgba(0,0,0,.07)"><span class="fact-k" style="color:#666">Target buyer</span><span class="fact-v" style="color:#1A1A1A">Operators with good evaluation skills</span></div>
+          <div class="fact-row" style="border-bottom-color:rgba(0,0,0,.07)"><span class="fact-k" style="color:#666">Range</span><span class="fact-v" style="color:#1A1A1A">6.10 · 10.10 tabletop, 20.10 · 20.20 floor</span></div>
+          <div class="fact-row" style="border-bottom-color:rgba(0,0,0,.07)"><span class="fact-k" style="color:#666">Differentiators</span><span class="fact-v" style="color:#1A1A1A">4 Function Managements, ConvoClean, HygieniCare</span></div>
+          <div class="fact-row" style="border-bottom-color:rgba(0,0,0,.07)"><span class="fact-k" style="color:#666">Parent</span><span class="fact-v" style="color:#1A1A1A">Welbilt · Eglfing, Germany</span></div>
+        </div>
+        <div class="mt-6">
+          <span class="chip" style="color:#96091F">Value-premium</span>
+          <span class="chip" style="color:#96091F">Not-too-much, not-too-little</span>
+          <span class="chip" style="color:#96091F">Service-friendly by design</span>
+          <span class="chip" style="color:#96091F">Cost-optimised in operation</span>
+        </div>
+        <p class="chart-note" style="color:#666">All claims sourced from convotherm.com/combiovens/maxx <span class="src" style="color:#C8102E">S4</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 CHANNEL FOOTPRINT -->
+<section id="footprint" class="py-24 px-6" style="background:#0A0A0A">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-14 reveal">
+      <p class="label-ornament mr-eyebrow mb-4" style="color:#F26173">03 · Channel Footprint</p>
+      <h2 class="text-white mr-h mb-4" style="font-size:clamp(1.8rem,3.5vw,2.8rem)">Where the Brand Already Shows Up</h2>
+      <div class="orange-bar mx-auto mb-5"></div>
+      <p class="text-white/55 max-w-2xl mx-auto" style="font-size:1rem">The channels exist. What is missing is a maxx-specific, always-on content engine running across them — which is exactly what the three pillars deliver.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="chan-card reveal-s d1">
+        <span class="chan-status st-live">Active</span>
+        <div class="chan-ic"><svg width="24" height="24" fill="none" stroke="#F26173" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20"/></svg></div>
+        <p class="chan-name">Website</p>
+        <p class="chan-meta">Dedicated maxx product page with specs, brochure and product sheet downloads. Strong content, light on conversion prompts.</p>
+        <p class="chan-handle">convotherm.com/combiovens/maxx</p>
+      </div>
+      <div class="chan-card reveal-s d2">
+        <span class="chan-status st-live">Active</span>
+        <div class="chan-ic"><svg width="24" height="24" fill="none" stroke="#F26173" stroke-width="1.5" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+        <p class="chan-name">LinkedIn</p>
+        <p class="chan-meta">The B2B room where chefs, dealers and procurement actually sit. Highest-leverage channel for a considered-purchase product.</p>
+        <p class="chan-handle">linkedin.com/company/convotherm</p>
+      </div>
+      <div class="chan-card reveal-s d3">
+        <span class="chan-status st-live">Active</span>
+        <div class="chan-ic"><svg width="24" height="24" fill="none" stroke="#F26173" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="#F26173"/></svg></div>
+        <p class="chan-name">Instagram</p>
+        <p class="chan-meta">Where food does the selling. Application photography and short-form cooking clips carry further here than spec sheets.</p>
+        <p class="chan-handle">@convotherm_official</p>
+      </div>
+      <div class="chan-card reveal-s d4">
+        <span class="chan-status st-weak">Under-used</span>
+        <div class="chan-ic"><svg width="24" height="24" fill="none" stroke="#F26173" stroke-width="1.5" viewBox="0 0 24 24"><path d="M22 8.5a3 3 0 00-2.1-2.1C18 6 12 6 12 6s-6 0-7.9.4A3 3 0 002 8.5 31 31 0 002 12a31 31 0 00.1 3.5 3 3 0 002 2.1C6 18 12 18 12 18s6 0 7.9-.4a3 3 0 002.1-2.1A31 31 0 0022 12a31 31 0 000-3.5z"/><path d="M10 15l5-3-5-3z"/></svg></div>
+        <p class="chan-name">Video / YouTube</p>
+        <p class="chan-meta">The format buyers use to compare ovens before enquiring — and the thinnest part of the current mix. Pillar 03 fills it.</p>
+        <p class="chan-handle">Opportunity channel</p>
+      </div>
+    </div>
+
+    <!-- Buyer journey -->
+    <div class="panel panel-d mt-8 reveal">
+      <p class="mr-eyebrow mb-6" style="color:#F26173">How a Combi Oven Actually Gets Bought</p>
+      <div class="funnel">
+        <div class="fn-row" style="--w:100%"><span>Trigger — new site, refit, or an oven that failed mid-service</span><span>Awareness</span></div>
+        <div class="fn-row" style="--w:84%"><span>Search &amp; social — "best combi oven for…"</span><span>Discovery</span></div>
+        <div class="fn-row" style="--w:66%"><span>Spec sheets, brochures, comparison videos</span><span>Evaluation</span></div>
+        <div class="fn-row" style="--w:46%"><span>Demo / test kitchen with a dealer</span><span>Validation</span></div>
+        <div class="fn-row" style="--w:30%"><span>Quotation and install</span><span>Purchase</span></div>
+      </div>
+      <p class="chart-note text-white">Illustrative journey for considered-purchase foodservice equipment — used to place content, not to forecast volume</p>
+    </div>
+  </div>
+</section>
+
+<!-- 04 OPPORTUNITIES -->
+<section id="opportunities" class="py-24 px-6" style="background:#F7F7F7">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-14 reveal">
+      <p class="label-ornament mr-eyebrow mb-4" style="color:#C8102E">04 · The Opportunity</p>
+      <h2 class="mr-h mb-4" style="font-size:clamp(1.8rem,3.5vw,2.8rem);color:#1A1A1A">Three Gaps, Three Pillars</h2>
+      <div class="orange-bar mx-auto mb-5"></div>
+      <p class="max-w-2xl mx-auto" style="color:#444444;font-size:1rem">Each pillar in the showcase answers a specific gap between how the maxx is built and how the market currently hears about it.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <a href="index.html#social" class="opp-card reveal-s d1 block" style="text-decoration:none">
+        <span class="opp-num">01</span>
+        <h3 class="text-xl font-extrabold mt-2 mb-3" style="color:#1A1A1A">Share of voice</h3>
+        <p style="color:#444444;font-size:.95rem;line-height:1.8">Rational sets the category default. Consistent, application-led social posting is the cheapest way to stay in the consideration set between trade shows.</p>
+        <span class="inline-flex items-center gap-2 mt-4 text-xs font-semibold" style="color:#C8102E">Social Media Posting →</span>
+      </a>
+      <a href="index.html#website" class="opp-card reveal-s d2 block" style="text-decoration:none">
+        <span class="opp-num">02</span>
+        <h3 class="text-xl font-extrabold mt-2 mb-3" style="color:#1A1A1A">Conversion &amp; AI visibility</h3>
+        <p style="color:#444444;font-size:.95rem;line-height:1.8">The maxx page tells the story well but asks for little. A persistent enquiry path plus structured product data makes it both convert and get quoted by AI assistants.</p>
+        <span class="inline-flex items-center gap-2 mt-4 text-xs font-semibold" style="color:#C8102E">Website →</span>
+      </a>
+      <a href="index.html#ai" class="opp-card reveal-s d3 block" style="text-decoration:none">
+        <span class="opp-num">03</span>
+        <h3 class="text-xl font-extrabold mt-2 mb-3" style="color:#1A1A1A">Video at the evaluation stage</h3>
+        <p style="color:#444444;font-size:.95rem;line-height:1.8">Buyers compare ovens on video before they ever call a dealer. AI generation produces that library in weeks, across four models, without a studio kitchen.</p>
+        <span class="inline-flex items-center gap-2 mt-4 text-xs font-semibold" style="color:#C8102E">AI Video &amp; Image →</span>
+      </a>
+    </div>
+
+    <div class="text-center mt-14 reveal">
+      <a href="index.html" class="btn btn-og text-xs tracking-[.15em] uppercase px-9 py-4 font-semibold">Back to the Showcase</a>
+    </div>
+  </div>
+</section>
+
+<!-- SOURCES -->
+<section class="py-16 px-6" style="background:#0A0A0A">
+  <div class="max-w-4xl mx-auto reveal">
+    <p class="mr-eyebrow mb-5" style="color:#F26173">Sources</p>
+    <ul class="srclist" style="list-style:none;padding:0;border-top:1px solid rgba(255,255,255,.08)">
+      <li style="border-bottom:1px solid rgba(255,255,255,.06)"><span class="src">S1</span> Mordor Intelligence — <a href="https://www.mordorintelligence.com/industry-reports/commercial-combi-ovens-market" target="_blank" rel="noopener">Commercial Combi Ovens Market Size &amp; Share, 2025–2031</a>. USD 2.04B (2025), 2.14B (2026), 3.29B (2031), 8.98% CAGR. The 2028 figure shown in the chart is interpolated on that CAGR, not a published data point.</li>
+      <li style="border-bottom:1px solid rgba(255,255,255,.06)"><span class="src">S2</span> Persistence Market Research — <a href="https://www.persistencemarketresearch.com/market-research/commercial-combi-oven-market.asp" target="_blank" rel="noopener">Commercial Combi Oven Market</a>. USD 2.7B (2026) to 5.2B (2033), 9.9% CAGR; Asia-Pacific fastest at 10.9%.</li>
+      <li style="border-bottom:1px solid rgba(255,255,255,.06)"><span class="src">S3</span> SNS Insider — <a href="https://www.snsinsider.com/reports/combi-ovens-market" target="_blank" rel="noopener">Combi Ovens Market Report</a>, growth-driver commentary.</li>
+      <li style="border-bottom:1px solid rgba(255,255,255,.06)"><span class="src">S4</span> Convotherm — <a href="https://www.convotherm.com/combiovens/maxx" target="_blank" rel="noopener">maxx series combi ovens</a>. All product claims, model line-up, imagery and brand language.</li>
+      <li><span class="src">S5</span> Convotherm official channels: <a href="https://www.linkedin.com/company/convotherm" target="_blank" rel="noopener">LinkedIn</a>, <a href="https://www.instagram.com/convotherm_official/" target="_blank" rel="noopener">Instagram</a>, <a href="https://www.facebook.com/Convotherm/" target="_blank" rel="noopener">Facebook</a>.</li>
+    </ul>
+    <p class="text-white/30 text-[11px] mt-6">Analyst estimates differ on category scope — figures above are quoted as published rather than reconciled. Share-of-voice and buyer-journey weightings are TechNext estimates for planning purposes, clearly labelled as such.</p>
+  </div>
+</section>
+
+<script src="app.js?v=1" defer></script>
+</body>
+</html>

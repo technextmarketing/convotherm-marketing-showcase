@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Digital Marketing Showcase — Convotherm maxx | TechNext</title>
+<meta name="description" content="A visual digital marketing showcase by TechNext for the Convotherm maxx combi oven series — social media, website and AI-generated content."/>
+<meta name="robots" content="noindex, nofollow"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#141414','mid':'#1C1C1C'},brand:{'DEFAULT':'#C8102E','light':'#E12742','pale':'#F26173'},chalk:{'DEFAULT':'#F7F7F7','dark':'#EFEFEF','deeper':'#E4E4E4'}},fontFamily:{display:['Open Sans','system-ui','sans-serif'],body:['Open Sans','system-ui','sans-serif']}}}}
+</script>
+<link rel="stylesheet" href="styles.css?v=1"/>
+<style>
+/* ===== Focus sections, galleries & rich interaction ===== */
+.focus-sec{padding:110px 24px;position:relative;overflow:hidden}
+.focus-eyebrow{font-size:13px;letter-spacing:.3em;text-transform:uppercase;font-weight:700}
+.focus-h{font-family:'Open Sans',sans-serif;font-weight:800;font-size:clamp(2.4rem,5.2vw,4rem);line-height:1.08;letter-spacing:-.015em}
+
+/* Text effects: moving colour + reflection */
+@keyframes flowMove{0%{background-position:0% 50%}100%{background-position:200% 50%}}
+.flow{background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:flowMove 6s linear infinite;padding-bottom:.04em}
+.flow-d{background-image:linear-gradient(90deg,#F26173,#FBC4CB,#FFFFFF,#F26173,#C8102E,#F26173)}
+.flow-l{background-image:linear-gradient(90deg,#7A0A19,#96091F,#C8102E,#96091F,#7A0A19)}
+.reflect{-webkit-box-reflect:below -4px linear-gradient(transparent 52%,rgba(200,16,46,.22))}
+@media(prefers-reduced-motion:reduce){.flow{animation:none}}
+
+/* Benefit chips */
+.chip-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.bchip{display:inline-flex;align-items:center;gap:7px;font-size:.92rem;font-weight:600;letter-spacing:.02em;padding:8px 16px;border-radius:99px;border:1px solid rgba(200,16,46,.3);background:rgba(200,16,46,.05);transition:transform .35s cubic-bezier(.34,1.6,.64,1),background .35s ease,border-color .35s ease}
+.bchip:hover{transform:translateY(-3px);background:rgba(200,16,46,.12);border-color:rgba(200,16,46,.55)}
+.bchip .dot{width:6px;height:6px;border-radius:50%;background:#C8102E}
+
+/* Overview cards */
+.ov-card{position:relative;border-radius:18px;padding:34px 28px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);overflow:hidden;cursor:pointer;transition:transform .5s cubic-bezier(.34,1.4,.64,1),box-shadow .5s ease,border-color .4s ease,background .4s ease}
+.ov-card:hover{background:rgba(200,16,46,.07);border-color:rgba(200,16,46,.55);box-shadow:0 28px 64px rgba(0,0,0,.55)}
+.ov-ic{width:62px;height:62px;border-radius:16px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(200,16,46,.2),rgba(200,16,46,.04));border:1px solid rgba(200,16,46,.4);margin-bottom:20px;transition:transform .5s cubic-bezier(.34,1.6,.64,1)}
+.ov-card:hover .ov-ic{transform:translateY(-4px) scale(1.08) rotate(-4deg)}
+.ov-num{position:absolute;top:16px;right:22px;font-family:'Open Sans',sans-serif;font-weight:800;letter-spacing:-.03em;font-size:2.1rem;color:rgba(200,16,46,.3);transition:color .4s ease}
+.ov-card:hover .ov-num{color:rgba(200,16,46,.75)}
+
+/* Tag + caption */
+.ph-tag{position:absolute;top:11px;right:13px;z-index:5;font-size:8.5px;letter-spacing:.16em;color:#fff;background:#C8102E;border:1px solid rgba(255,255,255,.2);padding:3px 9px;border-radius:5px;font-weight:700}
+.ph-cap{text-align:center;font-size:.88rem;margin-top:22px;color:#8A8A8A;letter-spacing:.03em}
+
+/* ── Social post cards ── */
+.post-card{position:relative;background:#141414;border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;transition:transform .55s cubic-bezier(.34,1.4,.64,1),box-shadow .55s ease,border-color .4s ease}
+.post-card:hover{border-color:rgba(200,16,46,.6);box-shadow:0 26px 58px rgba(0,0,0,.55)}
+.post-head{display:flex;align-items:center;gap:10px;padding:13px 15px}
+.post-ava{width:38px;height:38px;border-radius:50%;flex-shrink:0;overflow:hidden;border:1px solid rgba(200,16,46,.4);background:#fff;display:flex;align-items:center;justify-content:center}
+.post-ava img{width:78%;height:auto;object-fit:contain;display:block}
+.post-plat{margin-left:auto;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#F26173;border:1px solid rgba(200,16,46,.45);border-radius:5px;padding:3px 8px}
+.post-media{background:#fff;border-block:1px solid rgba(255,255,255,.08);overflow:hidden;line-height:0;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center}
+.post-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.34,1.3,.64,1)}
+.post-media.contain{background:linear-gradient(160deg,#FFFFFF,#EFEFEF)}
+.post-media.contain img{object-fit:contain;padding:14px}
+.post-card:hover .post-media img{transform:scale(1.05)}
+.pname{font-size:12px;font-weight:700;color:#fff;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.phandle{font-size:10px;color:rgba(255,255,255,.42);line-height:1.2}
+.post-cap{padding:11px 15px 0;font-size:11.5px;line-height:1.55;color:rgba(255,255,255,.62)}
+.post-cap b{color:#F26173;font-weight:600}
+.post-foot{display:flex;gap:20px;padding:11px 16px 13px;color:rgba(242,97,115,.6);border-top:1px solid rgba(255,255,255,.07);margin-top:11px}
+.post-card:hover .post-foot svg:hover{transform:scale(1.25)}
+.post-foot svg{transition:transform .3s ease}
+
+/* ── Browser mockup ── */
+.browser{position:relative;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.14);background:#0F0F0F;box-shadow:0 34px 90px rgba(0,0,0,.7);transition:transform .55s cubic-bezier(.34,1.4,.64,1),box-shadow .55s ease,border-color .4s ease}
+.browser:hover{border-color:rgba(200,16,46,.55);box-shadow:0 50px 120px rgba(0,0,0,.8)}
+.browser-bar{display:flex;align-items:center;gap:8px;padding:13px 16px;background:#141414;border-bottom:1px solid rgba(255,255,255,.1)}
+.bdot{width:11px;height:11px;border-radius:50%}
+.browser-url{flex:1;margin-left:10px;height:28px;border-radius:8px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;padding:0 13px;font-size:11px;color:rgba(255,255,255,.5)}
+.site-frame{position:relative;height:620px;background:#fff;overflow:hidden}
+.site-frame iframe{width:100%;height:100%;border:0;display:block}
+@media(max-width:640px){.site-frame{height:440px}}
+
+/* ── AI concept tiles ── */
+.vcard{position:relative;border-radius:16px;overflow:hidden;border:1px solid rgba(0,0,0,.1);background:#0F0F0F;aspect-ratio:16/9;box-shadow:0 20px 50px rgba(0,0,0,.22);transition:transform .55s cubic-bezier(.34,1.4,.64,1),box-shadow .55s ease,border-color .4s ease}
+.vcard:hover{border-color:rgba(200,16,46,.6);box-shadow:0 32px 70px rgba(0,0,0,.32)}
+.vcard>img{width:100%;height:100%;object-fit:cover;display:block;opacity:.42;transition:transform .8s cubic-bezier(.34,1.3,.64,1),opacity .5s ease}
+.vcard:hover>img{transform:scale(1.07);opacity:.55}
+.vcard-body{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:22px;background:linear-gradient(180deg,rgba(10,10,10,.35),rgba(10,10,10,.78))}
+.vcard-title{color:#fff;font-weight:700;font-size:1.02rem;letter-spacing:-.01em;margin-top:16px}
+.vcard-sub{color:rgba(255,255,255,.62);font-size:.79rem;margin-top:5px;max-width:30ch;line-height:1.5}
+.ai-badge{position:absolute;top:11px;left:11px;z-index:4;font-size:8px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#fff;background:#C8102E;padding:4px 9px;border-radius:5px}
+.play-btn{width:62px;height:62px;border-radius:50%;background:rgba(200,16,46,.22);border:2px solid rgba(242,97,115,.8);display:flex;align-items:center;justify-content:center;transition:transform .4s ease,background .4s ease;animation:pulse-ring 2.6s ease-out infinite;flex-shrink:0}
+.vcard:hover .play-btn{transform:scale(1.14);background:rgba(200,16,46,.5)}
+.play-btn::before{content:'';border-style:solid;border-width:11px 0 11px 18px;border-color:transparent transparent transparent #fff;margin-left:5px}
+@keyframes pulse-ring{0%{box-shadow:0 0 0 0 rgba(200,16,46,.4)}70%{box-shadow:0 0 0 24px rgba(200,16,46,0)}100%{box-shadow:0 0 0 0 rgba(200,16,46,0)}}
+
+/* AI still-image tiles */
+.ai-tile{position:relative;border-radius:14px;overflow:hidden;border:1px solid rgba(0,0,0,.09);aspect-ratio:1/1;background:linear-gradient(160deg,#FFFFFF,#EFEFEF);box-shadow:0 14px 36px rgba(0,0,0,.14);transition:transform .55s cubic-bezier(.34,1.4,.64,1),box-shadow .55s ease,border-color .4s ease}
+.ai-tile:hover{border-color:rgba(200,16,46,.5);box-shadow:0 26px 56px rgba(0,0,0,.22)}
+.ai-tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.34,1.3,.64,1)}
+.ai-tile.contain img{object-fit:contain;padding:16px}
+.ai-tile:hover img{transform:scale(1.06)}
+.ai-cap{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:30px 13px 12px;background:linear-gradient(to top,rgba(10,10,10,.94),transparent);color:#fff;font-size:.74rem;letter-spacing:.02em;transform:translateY(101%);opacity:0;transition:transform .45s cubic-bezier(.34,1.3,.64,1),opacity .4s ease}
+.ai-tile:hover .ai-cap{transform:translateY(0);opacity:1}
+
+/* Model strip */
+.model-card{background:linear-gradient(170deg,#FFFFFF,#EFEFEF);border:1px solid rgba(0,0,0,.08);border-radius:16px;padding:22px 18px 18px;text-align:center;transition:transform .45s cubic-bezier(.34,1.4,.64,1),box-shadow .45s ease,border-color .35s ease}
+.model-card:hover{transform:translateY(-6px);border-color:rgba(200,16,46,.5);box-shadow:0 24px 54px rgba(0,0,0,.16)}
+.model-card img{height:170px;width:auto;margin:0 auto 14px;object-fit:contain;display:block}
+.model-name{font-weight:800;font-size:1.05rem;color:#1A1A1A;letter-spacing:-.01em}
+.model-kind{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#C8102E;font-weight:700;margin-top:5px}
+
+/* Continuous float + shine */
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.float{animation:floaty 6s ease-in-out infinite}
+.shine{position:relative;overflow:hidden}
+.shine::before{content:'';position:absolute;top:0;left:-130%;width:55%;height:100%;background:linear-gradient(105deg,transparent 20%,rgba(255,255,255,.18) 50%,transparent 80%);transform:skewX(-18deg);transition:left .8s ease;pointer-events:none;z-index:6}
+.shine:hover::before{left:170%}
+@media(prefers-reduced-motion:reduce){.float,.play-btn{animation:none}}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<div id="cursor-glow"></div>
+<button id="toTop" aria-label="Back to top"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg></button>
+
+<!-- NAV -->
+<nav class="fixed top-0 left-0 right-0 z-50 px-6 lg:px-12 py-4" id="nav" style="background:rgba(10,10,10,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.12)">
+  <div class="max-w-6xl mx-auto flex items-center justify-between relative">
+    <a href="https://www.convotherm.com/combiovens/maxx" target="_blank" rel="noopener" style="text-decoration:none;display:flex;align-items:center">
+      <img src="assets/logo/convotherm-white.svg" alt="Convotherm" style="height:30px;width:auto">
+    </a>
+    <div id="navLinks" class="flex items-center gap-4 md:gap-8">
+      <a href="index.html" class="nav-page nav-current">Showcase</a>
+      <a href="market-research.html" class="nav-page">Marketing Research</a>
+    </div>
+    <button id="navToggle" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-bg relative min-h-screen flex items-center justify-center">
+  <img class="hero-img" src="assets/lifestyle/baking.jpg" alt="Convotherm maxx combi oven in a professional kitchen"/>
+  <div class="hero-overlay"></div>
+  <div class="grid-field"></div>
+  <div id="hero-inner" class="relative z-10 text-center px-6 max-w-4xl mx-auto pt-28 pb-20">
+    <div class="hero-badge-pill reveal">
+      <span class="badge-dot"></span>
+      Digital Marketing Showcase · 2026
+    </div>
+    <p class="text-white/55 text-[11px] tracking-[.3em] uppercase mb-5">A Showcase for</p>
+    <h1 class="font-extrabold leading-[1.06] mb-7" style="font-family:'Open Sans',sans-serif;letter-spacing:-.02em">
+      <span class="flow flow-d">Convotherm maxx</span><br>
+      <em class="font-normal orange-anim not-italic">Combi Ovens</em>
+    </h1>
+    <p class="text-white/75 mb-4" style="font-family:'Open Sans',sans-serif;font-size:1.32rem;line-height:1.7">
+      Three ways we'll take <strong style="color:#F26173;font-weight:600">maxx. just right.</strong> to market online — <strong style="color:#F26173;font-weight:600">social media</strong>, the <strong style="color:#F26173;font-weight:600">website</strong>, and <strong style="color:#F26173;font-weight:600">AI-generated content</strong>.
+    </p>
+    <p class="text-white/55 text-[11px] tracking-[.22em] uppercase mb-11">
+      Digital Marketing Showcase &nbsp;·&nbsp; Curated by TechNext
+    </p>
+    <div class="flex flex-row flex-wrap gap-4 justify-center">
+      <a href="#overview" class="btn btn-orange text-xs tracking-[.15em] uppercase px-9 py-4 font-semibold">
+        See What We'll Build
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+      <a href="market-research.html" class="btn btn-ow text-xs tracking-[.15em] uppercase px-9 py-4">View Marketing Research</a>
+    </div>
+    <!-- Hero stats bar -->
+    <div class="hero-stats-bar">
+      <div class="hero-stat-item">
+        <span class="hero-stat-n" data-count="4">4</span>
+        <span class="hero-stat-l">maxx Models</span>
+      </div>
+      <div class="hero-stat-item">
+        <span class="hero-stat-n" data-count="4">4</span>
+        <span class="hero-stat-l">Function Managements</span>
+      </div>
+      <div class="hero-stat-item">
+        <span class="hero-stat-n" data-count="7" data-suffix="&quot;">7"</span>
+        <span class="hero-stat-l">TFT Glass Touch Display</span>
+      </div>
+      <div class="hero-stat-item">
+        <span class="hero-stat-n" data-count="6">6</span>
+        <span class="hero-stat-l">Cookbook Categories</span>
+      </div>
+    </div>
+  </div>
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/40">
+    <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+  </div>
+</section>
+
+<!-- KEYWORD MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="mq">
+    <span>Social Media Posting</span><span>Website</span><span>AI Video Generation</span><span>AI Image Generation</span><span>Combi Oven Marketing</span><span>Foodservice Content</span><span>LinkedIn B2B</span><span>Product Showcase</span><span>Reels &amp; Shorts</span><span>German Engineering</span><span>Dealer Enablement</span>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<section id="overview" class="py-24 px-6" style="background:#0A0A0A">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16 reveal">
+      <p class="label-ornament text-[11px] tracking-[.3em] uppercase mb-4" style="color:#F26173">What We'll Focus On</p>
+      <h2 class="focus-h flow flow-d mb-5">Three Ways to Grow Convotherm maxx Online</h2>
+      <div class="orange-bar mx-auto mb-6"></div>
+      <p class="text-white/65 max-w-2xl mx-auto" style="font-size:1.2rem">A visual-first digital strategy built around three high-impact pillars — turning premium German engineering into online visibility, dealer demand and qualified enquiries.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      <a href="#social" class="ov-card reveal-s d1 block" style="text-decoration:none">
+        <span class="ov-num">01</span>
+        <div class="ov-ic">
+          <svg width="30" height="30" fill="none" stroke="#C8102E" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="#F26173"/></svg>
+        </div>
+        <h3 class="text-2xl font-extrabold mb-2 text-white">Social Media Posting</h3>
+        <p class="text-base" style="color:rgba(255,255,255,.6)">On-brand posts that keep the maxx visible to chefs, operators and dealers between trade shows.</p>
+        <span class="inline-flex items-center gap-2 mt-4 text-xs font-semibold" style="color:#F26173">Explore <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></span>
+      </a>
+
+      <a href="#website" class="ov-card reveal-s d2 block" style="text-decoration:none">
+        <span class="ov-num">02</span>
+        <div class="ov-ic">
+          <svg width="30" height="30" fill="none" stroke="#C8102E" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20"/><circle cx="5.5" cy="6.5" r=".6" fill="#F26173"/><circle cx="7.8" cy="6.5" r=".6" fill="#F26173"/></svg>
+        </div>
+        <h3 class="text-2xl font-extrabold mb-2 text-white">Website</h3>
+        <p class="text-base" style="color:rgba(255,255,255,.6)">The maxx product page as the conversion hub — specs, brochure and enquiry, all in one place.</p>
+        <span class="inline-flex items-center gap-2 mt-4 text-xs font-semibold" style="color:#F26173">Explore <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></span>
+      </a>
+
+      <a href="#ai" class="ov-card reveal-s d3 block" style="text-decoration:none">
+        <span class="ov-num">03</span>
+        <div class="ov-ic">
+          <svg width="30" height="30" fill="none" stroke="#C8102E" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><circle cx="18.5" cy="5" r=".9" fill="#F26173"/><circle cx="5.5" cy="18" r=".9" fill="#F26173"/></svg>
+        </div>
+        <h3 class="text-2xl font-extrabold mb-2 text-white">AI Video &amp; Image Generation</h3>
+        <p class="text-base" style="color:rgba(255,255,255,.6)">Product films and application visuals produced fast — without booking a studio kitchen.</p>
+        <span class="inline-flex items-center gap-2 mt-4 text-xs font-semibold" style="color:#F26173">Explore <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></span>
+      </a>
+
+    </div>
+
+    <!-- Model strip -->
+    <div class="mt-16 reveal">
+      <p class="text-center text-[11px] tracking-[.3em] uppercase mb-7" style="color:rgba(255,255,255,.45)">The Range We're Marketing</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+        <div class="model-card tilt"><img src="assets/product/maxx-6-10.png" alt="Convotherm maxx 6.10 combi oven" loading="lazy"><p class="model-name">maxx 6.10</p><p class="model-kind">Tabletop</p></div>
+        <div class="model-card tilt"><img src="assets/product/maxx-10-10.png" alt="Convotherm maxx 10.10 combi oven" loading="lazy"><p class="model-name">maxx 10.10</p><p class="model-kind">Tabletop</p></div>
+        <div class="model-card tilt"><img src="assets/product/maxx-20-10.png" alt="Convotherm maxx 20.10 combi oven" loading="lazy"><p class="model-name">maxx 20.10</p><p class="model-kind">Floor-standing · New</p></div>
+        <div class="model-card tilt"><img src="assets/product/maxx-20-20.png" alt="Convotherm maxx 20.20 combi oven" loading="lazy"><p class="model-name">maxx 20.20</p><p class="model-kind">Floor-standing · New</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 SOCIAL MEDIA POSTING -->
+<section id="social" class="focus-sec" style="background:#F7F7F7">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-4 reveal">
+      <p class="focus-eyebrow" style="color:#C8102E">01 · Social Media Posting</p>
+      <h2 class="focus-h flow flow-l mt-3 mb-4">Show Up Where Chefs Decide</h2>
+      <div class="orange-bar mx-auto mb-6"></div>
+      <p class="max-w-2xl mx-auto mb-7" style="color:#444444;font-size:1.2rem;line-height:1.8">A steady stream of professional, on-brand posts keeps the Convotherm maxx top-of-mind — building trust with head chefs, snack-business owners and equipment dealers long before the first quotation.</p>
+      <div class="chip-row mb-2">
+        <span class="bchip" style="color:#96091F"><span class="dot"></span>Brand Authority</span>
+        <span class="bchip" style="color:#96091F"><span class="dot"></span>Real Applications Shown</span>
+        <span class="bchip" style="color:#96091F"><span class="dot"></span>Always-On Presence</span>
+      </div>
+    </div>
+
+    <!-- 12 sample posts · 4-column grid -->
+    <div class="relative reveal">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mt-4">
+
+        <div class="post-card tilt shine">
+          <div class="post-head"><div class="post-ava"><img src="assets/logo/convotherm-color.svg" alt="Convotherm"></div><div class="flex-1 min-w-0"><p class="pname">Convotherm</p><p class="phandle">Sponsored</p></div><span class="post-plat">LinkedIn</span></div>
+          <div class="post-media"><img src="assets/lifestyle/baking.jpg" alt="Baking in the Convotherm maxx" loading="lazy"></div>
+          <p class="post-cap">BakePro turns one oven into a bakery. <b>#ConvothermMaxx</b></p>
+          <div class="post-foot"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M20.8 8.6a5.5 5.5 0 00-9.8-3.4A5.5 5.5 0 003.2 8.6c0 4.3 8.3 9.9 8.8 9.9s8.8-5.6 8.8-9.9z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 12v8h16v-8M16 6l-4-4-4 4M12 2v14"/></svg></div>
+        </div>
+
+        <div class="post-card tilt shine">
+          <div class="post-head"><div class="post-ava"><img src="assets/logo/convotherm-color.svg" alt="Convotherm"></div><div class="flex-1 min-w-0"><p class="pname">Convotherm</p><p class="phandle">2h · Sponsored</p></div><span class="post-plat">Instagram</span></div>
+          <div class="post-media contain"><img src="assets/product/maxx-6-10.png" alt="Convotherm maxx 6.10" loading="lazy"></div>
+          <p class="post-cap">Meet the maxx 6.10. Small footprint, full toolkit. <b>#maxxJustRight</b></p>
+          <div class="post-foot"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M20.8 8.6a5.5 5.5 0 00-9.8-3.4A5.5 5.5 0 003.2 8.6c0 4.3 8.3 9.9 8.8 9.9s8.8-5.6 8.8-9.9z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 12v8h16v-8M16 6l-4-4-4 4M12 2v14"/></svg></div>
+        </div>
+
+        <div class="post-card tilt shine">
+          <div class="post-head"><div class="post-ava"><img src="assets/logo/convotherm-color.svg" alt="Convotherm"></div><div class="flex-1 min-w-0"><p class="pname">Convotherm</p><p class="phandle">Sponsored</p></div><span class="post-plat">Instagram</span></div>
+          <div class="post-media"><img src="assets/lifestyle/vegetables.jpg" alt="Steamed vegetables from the Convotherm maxx" loading="lazy"></div>
+          <p class="post-cap">HumidityPro keeps vegetables bright, never soggy. <b>#SelfClimateControl</b></p>
+          <div class="post-foot"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M20.8 8.6a5.5 5.5 0 00-9.8-3.4A5.5 5.5 0 003.2 8.6c0 4.3 8.3 9.9 8.8 9.9s8.8-5.6 8.8-9.9z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 12v8h16v-8M16 6l-4-4-4 4M12 2v14"/></svg></div>
+        </div>
+
+        <div class="post-card tilt shine">
+          <div class="post-head"><div class="post-ava"><img src="assets/logo/convotherm-color.svg" alt="Convotherm"></div><div class="flex-1 min-w-0"><p class="pname">Convotherm</p><p class="phandle">1d · Sponsored</p></div><span class="post-plat">LinkedIn</span></div>
+          <div class="post-media"><img src="assets/lifestyle/meat.jpg" alt="Roast meat cooked in the Convotherm maxx" loading="lazy"></div>
+          <p class="post-cap">Crisp&amp;Tasty: the finish your guests remember. <b>#QualityManagement</b></p>
+          <div class="post-foot"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M20.8 8.6a5.5 5.5 0 00-9.8-3.4A5.5 5.5 0 003.2 8.6c0 4.3 8.3 9.9 8.8 9.9s8.8-5.6 8.8-9.9z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 12v8h16v-8M16 6l-4-4-4 4M12 2v14"/></svg></div>
+        </div>
+
+        <div class="post-card tilt shine">
+          <div class="post-head"><div class="post-ava"><img src="assets/logo/convotherm-color.svg" alt="Convotherm"></div><div class="flex-1 min-w-0"><p class="pname">Convotherm</p><p class="phandle">Sponsored</p></div><span class="post-plat">Instagram</span></div>
+          <div class="post-media"><img src="assets/lifestyle/fish.jpg" alt="Fish cooked in the Convotherm maxx" loading="lazy"></div>
+          <p class="post-cap">Delicate fish, consistent every service. <b>#AirflowManagement</b></p>
+          <div class="post-foot"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M20.8 8.6a5.5 5.5 0 00-9.8-3.4A5.5 5.5 0 003.2 8.6c0 4.3 8.3 9.9 8.8 9.9s8.8-5.6 8.8-9.9z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 12v8h16v-8M16 6l-4-4-4 4M12 2v14"/></svg></div>
+        </div>
+
+        <div class="post-card tilt shine">
+          <div class="post-head"><div class="post-ava"><img src="assets/logo/convotherm-color.svg" alt="Convotherm"></div><div class="flex-1 min-w-0"><p class="pname">Convotherm</p><p class="phandle">3h · Sponsored</p></div><span class="post-plat">Instagram</span></div>
+          <div class="post-media contain"><img src="assets/product/maxx-10-10.png" alt="Convotherm maxx 10.10" loading="lazy"></div>
+          <p class="post-cap">maxx 10.10 — one extra shelf, a whole extra gear. <b>#Tabletop</b></p>
+          <div class="post-foot"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M20.8 8.6a5.5 5.5 0 00-9.8-3.4A5.5 5.5 0 003.2 8.6c0 4.3 8.3 9.9 8.8 9.9s8.8-5.6 8.8-9.9z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 12v8h16v-8M16 6l-4-4-4 4M12 2v14"/></svg></div>
+        </div>
+
+        <div class="post-card tilt shine">
+          <div class="post-head"><div class="post-ava"><img src="assets/logo/convotherm-color.svg" alt="Convotherm"></div><div class="flex-1 min-w-0"><p class="pname">Convotherm</p><p class="phandle">Sponsored</p></div><span class="post-plat">LinkedIn</span></div>
+          <div class="post-media"><img src="assets/mgmt/managements.png" alt="Convotherm Function Managements" loading="lazy"></div>
+          <p class="post-cap">Four Function Managements. One oven that thinks ahead. <b>#GermanEngineering</b></p>
+          <div class="post-foot"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M20.8 8.6a5.5 5.5 0 00-9.8-3.4A5.5 5.5 0 003.2 8.6c0 4.3 8.3 9.9 8.8 9.9s8.8-5.6 8.8-9.9z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 12v8h16v-8M16 6l-4-4-4 4M12 2v14"/></svg></div>
+        </div>
+
+        <div class="post-card tilt shine">
+          <div class="post-head"><div class="post-ava"><img src="assets/logo/convotherm-color.svg" alt="Convotherm"></div><div class="flex-1 min-w-0"><p class="pname">Convotherm</p><p class="phandle">5h · Sponsored</p></div><span class="post-plat">Instagram</span></div>
+          <div class="post-media contain"><img src="assets/product/maxx-20-10.png" alt="Convotherm maxx 20.10" loading="lazy"></div>
+          <p class="post-cap">NEW: maxx 20.10 floor-standing. Bigger demands, same precision. <b>#New</b></p>
+          <div class="post-foot"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M20.8 8.6a5.5 5.5 0 00-9.8-3.4A5.5 5.5 0 003.2 8.6c0 4.3 8.3 9.9 8.8 9.9s8.8-5.6 8.8-9.9z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 12v8h16v-8M16 6l-4-4-4 4M12 2v14"/></svg></div>
+        </div>
+
+        <div class="post-card tilt shine">
+          <div class="post-head"><div class="post-ava"><img src="assets/logo/convotherm-color.svg" alt="Convotherm"></div><div class="flex-1 min-w-0"><p class="pname">Convotherm</p><p class="phandle">Sponsored</p></div><span class="post-plat">Instagram</span></div>
+          <div class="post-media"><img src="assets/lifestyle/service-team.jpg" alt="Convotherm service partner" loading="lazy"></div>
+          <p class="post-cap">A worldwide service network, on call. <b>#AlwaysAtHand</b></p>
+          <div class="post-foot"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M20.8 8.6a5.5 5.5 0 00-9.8-3.4A5.5 5.5 0 003.2 8.6c0 4.3 8.3 9.9 8.8 9.9s8.8-5.6 8.8-9.9z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 12v8h16v-8M16 6l-4-4-4 4M12 2v14"/></svg></div>
+        </div>
+
+        <div class="post-card tilt shine">
+          <div class="post-head"><div class="post-ava"><img src="assets/logo/convotherm-color.svg" alt="Convotherm"></div><div class="flex-1 min-w-0"><p class="pname">Convotherm</p><p class="phandle">1d · Sponsored</p></div><span class="post-plat">LinkedIn</span></div>
+          <div class="post-media"><img src="assets/lifestyle/service-design.jpg" alt="Service-friendly design of the Convotherm maxx" loading="lazy"></div>
+          <p class="post-cap">Two service ports. Online diagnostics. Less downtime. <b>#ServiceFriendly</b></p>
+          <div class="post-foot"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M20.8 8.6a5.5 5.5 0 00-9.8-3.4A5.5 5.5 0 003.2 8.6c0 4.3 8.3 9.9 8.8 9.9s8.8-5.6 8.8-9.9z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 12v8h16v-8M16 6l-4-4-4 4M12 2v14"/></svg></div>
+        </div>
+
+        <div class="post-card tilt shine">
+          <div class="post-head"><div class="post-ava"><img src="assets/logo/convotherm-color.svg" alt="Convotherm"></div><div class="flex-1 min-w-0"><p class="pname">Convotherm</p><p class="phandle">Sponsored</p></div><span class="post-plat">Instagram</span></div>
+          <div class="post-media contain"><img src="assets/product/maxx-20-20.png" alt="Convotherm maxx 20.20" loading="lazy"></div>
+          <p class="post-cap">maxx 20.20 — volume without compromise. <b>#FloorStanding</b></p>
+          <div class="post-foot"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M20.8 8.6a5.5 5.5 0 00-9.8-3.4A5.5 5.5 0 003.2 8.6c0 4.3 8.3 9.9 8.8 9.9s8.8-5.6 8.8-9.9z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 12v8h16v-8M16 6l-4-4-4 4M12 2v14"/></svg></div>
+        </div>
+
+        <div class="post-card tilt shine">
+          <div class="post-head"><div class="post-ava"><img src="assets/logo/convotherm-color.svg" alt="Convotherm"></div><div class="flex-1 min-w-0"><p class="pname">Convotherm</p><p class="phandle">6h · Sponsored</p></div><span class="post-plat">Instagram</span></div>
+          <div class="post-media"><img src="assets/lifestyle/cost.jpg" alt="Cost optimisation with the Convotherm maxx" loading="lazy"></div>
+          <p class="post-cap">ConvoClean: fully automatic, kinder on water and power. <b>#CleaningManagement</b></p>
+          <div class="post-foot"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M20.8 8.6a5.5 5.5 0 00-9.8-3.4A5.5 5.5 0 003.2 8.6c0 4.3 8.3 9.9 8.8 9.9s8.8-5.6 8.8-9.9z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 12v8h16v-8M16 6l-4-4-4 4M12 2v14"/></svg></div>
+        </div>
+
+      </div>
+      <p class="ph-cap">Sample posts built from Convotherm's own maxx imagery — 12 concepts across LinkedIn and Instagram</p>
+    </div>
+  </div>
+</section>
+
+<!-- 02 WEBSITE -->
+<section id="website" class="focus-sec" style="background:#0A0A0A">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-4 reveal">
+      <p class="focus-eyebrow" style="color:#F26173">02 · Website</p>
+      <h2 class="focus-h flow flow-d mt-3 mb-4">A Product Page That Sells</h2>
+      <div class="orange-bar mx-auto mb-6"></div>
+      <p class="max-w-2xl mx-auto mb-7 text-white/70" style="font-size:1.2rem;line-height:1.8">The maxx page is where every campaign lands. It has to carry the story from "maxx. just right." to a downloaded brochure and a dealer enquiry — on the phone, in the kitchen, mid-shift.</p>
+      <div class="chip-row mb-2">
+        <span class="bchip" style="color:#F26173"><span class="dot"></span>Instant Credibility</span>
+        <span class="bchip" style="color:#F26173"><span class="dot"></span>Specs &amp; Brochure in Reach</span>
+        <span class="bchip" style="color:#F26173"><span class="dot"></span>One Home for Everything</span>
+      </div>
+    </div>
+
+    <!-- Live Convotherm maxx page embed -->
+    <div class="relative reveal mt-6">
+      <span class="ph-tag">LIVE PREVIEW</span>
+      <div class="browser shine">
+        <div class="browser-bar">
+          <span class="bdot" style="background:#ff5f57"></span>
+          <span class="bdot" style="background:#febc2e"></span>
+          <span class="bdot" style="background:#28c840"></span>
+          <span class="browser-url">www.convotherm.com/combiovens/maxx</span>
+        </div>
+        <div class="site-frame">
+          <iframe src="https://www.convotherm.com/combiovens/maxx" title="Convotherm maxx combi ovens" loading="lazy"></iframe>
+        </div>
+      </div>
+      <p class="ph-cap">Live preview of the Convotherm maxx page — <a href="https://www.convotherm.com/combiovens/maxx" target="_blank" rel="noopener" style="color:#F26173;text-decoration:underline;text-underline-offset:2px">open in a new tab</a></p>
+    </div>
+
+    <!-- What we'd strengthen -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-14">
+      <div class="ov-card reveal-s d1" style="cursor:default">
+        <h3 class="text-lg font-extrabold mb-2 text-white">Capture the enquiry</h3>
+        <p class="text-sm" style="color:rgba(255,255,255,.6)">Persistent "Request a demo / Find a dealer" call-to-action so interest never has to scroll back to the top.</p>
+      </div>
+      <div class="ov-card reveal-s d2" style="cursor:default">
+        <h3 class="text-lg font-extrabold mb-2 text-white">Search &amp; AI visibility</h3>
+        <p class="text-sm" style="color:rgba(255,255,255,.6)">Structured product data and comparison content so the maxx is quoted when buyers ask an AI assistant which combi oven to buy.</p>
+      </div>
+      <div class="ov-card reveal-s d3" style="cursor:default">
+        <h3 class="text-lg font-extrabold mb-2 text-white">Proof in the page</h3>
+        <p class="text-sm" style="color:rgba(255,255,255,.6)">Kitchen case studies, running-cost figures and short application films placed where the buyer is already reading.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 AI VIDEO & IMAGE GENERATION -->
+<section id="ai" class="focus-sec" style="background:#F7F7F7">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-4 reveal">
+      <p class="focus-eyebrow" style="color:#C8102E">03 · AI Video &amp; Image Generation</p>
+      <h2 class="focus-h flow flow-l mt-3 mb-4">Studio-Quality Content, Without the Studio</h2>
+      <div class="orange-bar mx-auto mb-6"></div>
+      <p class="max-w-2xl mx-auto mb-7" style="color:#444444;font-size:1.2rem;line-height:1.8">AI produces product films and application visuals at a fraction of the usual cost and time — bringing all four maxx models and every Function Management to life without booking a test kitchen, a crew and a food stylist.</p>
+      <div class="chip-row mb-2">
+        <span class="bchip" style="color:#96091F"><span class="dot"></span>Fast Turnaround</span>
+        <span class="bchip" style="color:#96091F"><span class="dot"></span>Affordable</span>
+        <span class="bchip" style="color:#96091F"><span class="dot"></span>Content at Scale</span>
+      </div>
+    </div>
+
+    <!-- AI video concepts -->
+    <div class="relative reveal mt-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <div class="vcard tilt shine"><span class="ai-badge">AI Video · Concept</span>
+          <img src="assets/lifestyle/baking.jpg" alt="" loading="lazy">
+          <div class="vcard-body">
+            <span class="play-btn"></span>
+            <p class="vcard-title">"One oven, eight services"</p>
+            <p class="vcard-sub">A day in a busy kitchen, compressed to 30 seconds — breakfast bake to late-night snack.</p>
+          </div>
+        </div>
+
+        <div class="vcard tilt shine"><span class="ai-badge">AI Video · Concept</span>
+          <img src="assets/lifestyle/meat.jpg" alt="" loading="lazy">
+          <div class="vcard-body">
+            <span class="play-btn"></span>
+            <p class="vcard-title">Crisp&amp;Tasty, slowed down</p>
+            <p class="vcard-sub">Macro film of the finish moment — the argument for Quality Management in one shot.</p>
+          </div>
+        </div>
+
+        <div class="vcard tilt shine"><span class="ai-badge">AI Video · Concept</span>
+          <img src="assets/lifestyle/service-design.jpg" alt="" loading="lazy">
+          <div class="vcard-body">
+            <span class="play-btn"></span>
+            <p class="vcard-title">Inside the service-friendly design</p>
+            <p class="vcard-sub">An animated cutaway of the two service ports and Plug&amp;Play components.</p>
+          </div>
+        </div>
+
+        <div class="vcard tilt shine"><span class="ai-badge">AI Video · Concept</span>
+          <img src="assets/lifestyle/vegetables.jpg" alt="" loading="lazy">
+          <div class="vcard-body">
+            <span class="play-btn"></span>
+            <p class="vcard-title">Press&amp;Go in real time</p>
+            <p class="vcard-sub">Screen-recording of the 7" glass touch display, narrated for first-time operators.</p>
+          </div>
+        </div>
+
+        <div class="vcard tilt shine"><span class="ai-badge">AI Video · Concept</span>
+          <img src="assets/lifestyle/cost.jpg" alt="" loading="lazy">
+          <div class="vcard-body">
+            <span class="play-btn"></span>
+            <p class="vcard-title">What ConvoClean saves you</p>
+            <p class="vcard-sub">Water, power and labour, visualised — the running-cost story dealers keep asking for.</p>
+          </div>
+        </div>
+
+        <div class="vcard tilt shine"><span class="ai-badge">AI Video · Concept</span>
+          <img src="assets/lifestyle/fish.jpg" alt="" loading="lazy">
+          <div class="vcard-body">
+            <span class="play-btn"></span>
+            <p class="vcard-title">Tabletop vs floor-standing</p>
+            <p class="vcard-sub">A 20-second explainer that routes 6.10/10.10 and 20.10/20.20 buyers to the right model.</p>
+          </div>
+        </div>
+
+      </div>
+      <p class="ph-cap">Six AI video concepts, storyboarded on Convotherm's own maxx photography — films to be produced</p>
+    </div>
+
+    <!-- AI still-image direction -->
+    <div class="relative reveal mt-16">
+      <p class="text-center text-[11px] tracking-[.3em] uppercase mb-7" style="color:#8A8A8A">Visual Direction for AI Stills</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+        <div class="ai-tile tilt"><img src="assets/lifestyle/baking.jpg" alt="Baking application" loading="lazy"><span class="ai-cap">Application: bakery &amp; pastry</span></div>
+        <div class="ai-tile tilt contain"><img src="assets/product/maxx-10-10.png" alt="maxx 10.10 hero render" loading="lazy"><span class="ai-cap">Hero render: maxx 10.10</span></div>
+        <div class="ai-tile tilt"><img src="assets/lifestyle/vegetables.jpg" alt="Vegetable application" loading="lazy"><span class="ai-cap">Application: steaming &amp; sides</span></div>
+        <div class="ai-tile tilt"><img src="assets/lifestyle/meat.jpg" alt="Meat application" loading="lazy"><span class="ai-cap">Application: roasting &amp; grilling</span></div>
+        <div class="ai-tile tilt"><img src="assets/lifestyle/fish.jpg" alt="Fish application" loading="lazy"><span class="ai-cap">Application: delicate proteins</span></div>
+        <div class="ai-tile tilt contain"><img src="assets/product/maxx-20-20.png" alt="maxx 20.20 hero render" loading="lazy"><span class="ai-cap">Hero render: maxx 20.20</span></div>
+        <div class="ai-tile tilt"><img src="assets/lifestyle/service-team.jpg" alt="Service partner" loading="lazy"><span class="ai-cap">People: service partners</span></div>
+        <div class="ai-tile tilt contain"><img src="assets/mgmt/managements.png" alt="Function Managements" loading="lazy"><span class="ai-cap">Diagram: Function Managements</span></div>
+      </div>
+      <p class="ph-cap">Reference frames from Convotherm's library — the look and framing every AI-generated still would match</p>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="py-24 px-6 relative" style="background:linear-gradient(160deg,#141414,#0A0A0A)">
+  <div class="absolute inset-0 dot-bg opacity-30"></div>
+  <div class="max-w-3xl mx-auto text-center relative z-10 reveal">
+    <p class="label-ornament text-[11px] tracking-[.3em] uppercase mb-5" style="color:#F26173">The Vision</p>
+    <h2 class="focus-h flow flow-d reflect mb-6">Social. Website. AI Content. One Brand, Everywhere.</h2>
+    <p class="text-white/70 max-w-2xl mx-auto" style="font-size:1.25rem;line-height:1.8">
+      Together, these three pillars put German engineering in front of the right buyers — consistently, professionally, and at scale. For the market context behind this strategy, see the
+      <a href="market-research.html" style="color:#F26173;text-decoration:underline;text-underline-offset:3px">marketing research</a>.
+    </p>
+    <div class="mt-12 flex items-center justify-center gap-8 opacity-60">
+      <img src="assets/logo/convotherm-white.svg" alt="Convotherm" style="height:26px;width:auto">
+      <span style="width:1px;height:30px;background:rgba(255,255,255,.2);display:block"></span>
+      <img src="assets/logo/welbilt-white.svg" alt="Welbilt" style="height:30px;width:auto">
+    </div>
+  </div>
+</section>
+
+<script src="app.js?v=1" defer></script>
+</body>
+</html>
