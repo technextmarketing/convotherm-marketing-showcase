@@ -63,19 +63,15 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
 .post-foot{display:flex;gap:20px;padding:11px 16px 13px;color:rgba(242,97,115,.6);border-top:1px solid rgba(255,255,255,.07);margin-top:11px}
 .post-card:hover .post-foot svg:hover{transform:scale(1.25)}
 .post-foot svg{transition:transform .3s ease}
-/* ── AI concept tiles ── */
+/* ── AI video tiles ── */
 .vcard{position:relative;border-radius:16px;overflow:hidden;border:1px solid rgba(0,0,0,.1);background:#0F0F0F;aspect-ratio:16/9;box-shadow:0 20px 50px rgba(0,0,0,.22);transition:transform .55s cubic-bezier(.34,1.4,.64,1),box-shadow .55s ease,border-color .4s ease}
 .vcard:hover{border-color:rgba(200,16,46,.6);box-shadow:0 32px 70px rgba(0,0,0,.32)}
-.vcard>img{width:100%;height:100%;object-fit:cover;display:block;opacity:.42;transition:transform .8s cubic-bezier(.34,1.3,.64,1),opacity .5s ease}
-.vcard:hover>img{transform:scale(1.07);opacity:.55}
-.vcard-body{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:22px;background:linear-gradient(180deg,rgba(10,10,10,.35),rgba(10,10,10,.78))}
-.vcard-title{color:#fff;font-weight:700;font-size:1.02rem;letter-spacing:-.01em;margin-top:16px}
-.vcard-sub{color:rgba(255,255,255,.62);font-size:.79rem;margin-top:5px;max-width:30ch;line-height:1.5}
+.vcard>video{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.34,1.3,.64,1)}
+.vcard:hover>video{transform:scale(1.04)}
+.vcard-cap{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:44px 18px 15px;pointer-events:none;background:linear-gradient(to top,rgba(8,8,8,.94) 0%,rgba(8,8,8,.62) 48%,transparent 100%)}
+.vcard-title{color:#fff;font-weight:700;font-size:1.02rem;letter-spacing:-.01em}
+.vcard-sub{color:rgba(255,255,255,.72);font-size:.79rem;margin-top:4px;line-height:1.5}
 .ai-badge{position:absolute;top:11px;left:11px;z-index:4;font-size:8px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#fff;background:#C8102E;padding:4px 9px;border-radius:5px}
-.play-btn{width:62px;height:62px;border-radius:50%;background:rgba(200,16,46,.22);border:2px solid rgba(242,97,115,.8);display:flex;align-items:center;justify-content:center;transition:transform .4s ease,background .4s ease;animation:pulse-ring 2.6s ease-out infinite;flex-shrink:0}
-.vcard:hover .play-btn{transform:scale(1.14);background:rgba(200,16,46,.5)}
-.play-btn::before{content:'';border-style:solid;border-width:11px 0 11px 18px;border-color:transparent transparent transparent #fff;margin-left:5px}
-@keyframes pulse-ring{0%{box-shadow:0 0 0 0 rgba(200,16,46,.4)}70%{box-shadow:0 0 0 24px rgba(200,16,46,0)}100%{box-shadow:0 0 0 0 rgba(200,16,46,0)}}
 
 /* AI still-image tiles */
 .ai-tile{position:relative;border-radius:14px;overflow:hidden;border:1px solid rgba(0,0,0,.09);aspect-ratio:1/1;background:linear-gradient(160deg,#FFFFFF,#EFEFEF);box-shadow:0 14px 36px rgba(0,0,0,.14);transition:transform .55s cubic-bezier(.34,1.4,.64,1),box-shadow .55s ease,border-color .4s ease}
@@ -302,7 +298,7 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
       <p class="focus-eyebrow" style="color:#C8102E">02 · AI Video &amp; Image Generation</p>
       <h2 class="focus-h flow flow-l mt-3 mb-4">Studio-Quality Content, Without the Studio</h2>
       <div class="orange-bar mx-auto mb-6"></div>
-      <p class="max-w-2xl mx-auto mb-7" style="color:#444444;font-size:1.2rem;line-height:1.8">AI produces product films and application visuals at a fraction of the usual cost and time — bringing all four maxx models and every Function Management to life without booking a test kitchen, a crew and a food stylist.</p>
+      <p class="max-w-2xl mx-auto mb-7" style="color:#444444;font-size:1.2rem;line-height:1.8">Every film below was generated with AI — no test kitchen, no crew, no food stylist. That is the whole argument: application footage for all four maxx models and every Function Management, at a fraction of the usual cost and turnaround.</p>
       <div class="chip-row mb-2">
         <span class="bchip" style="color:#96091F"><span class="dot"></span>Fast Turnaround</span>
         <span class="bchip" style="color:#96091F"><span class="dot"></span>Affordable</span>
@@ -310,66 +306,60 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
       </div>
     </div>
 
-    <!-- AI video concepts -->
+    <!-- AI-generated product films -->
     <div class="relative reveal mt-6">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-        <div class="vcard tilt shine"><span class="ai-badge">AI Video · Concept</span>
-          <img src="assets/lifestyle/baking.jpg" alt="" loading="lazy">
-          <div class="vcard-body">
-            <span class="play-btn"></span>
-            <p class="vcard-title">"One oven, eight services"</p>
-            <p class="vcard-sub">A day in a busy kitchen, compressed to 30 seconds — breakfast bake to late-night snack.</p>
+        <div class="vcard tilt shine"><span class="ai-badge">AI Video</span>
+          <video autoplay muted loop playsinline preload="metadata" poster="assets/video/1.jpg"><source src="assets/video/1.mp4" type="video/mp4"/></video>
+          <div class="vcard-cap">
+            <p class="vcard-title">A bakery's whole morning, in one load</p>
+            <p class="vcard-sub">BakePro and Crisp&amp;Tasty doing the work — the maxx as the engine room behind the counter.</p>
           </div>
         </div>
 
-        <div class="vcard tilt shine"><span class="ai-badge">AI Video · Concept</span>
-          <img src="assets/lifestyle/meat.jpg" alt="" loading="lazy">
-          <div class="vcard-body">
-            <span class="play-btn"></span>
-            <p class="vcard-title">Crisp&amp;Tasty, slowed down</p>
-            <p class="vcard-sub">Macro film of the finish moment — the argument for Quality Management in one shot.</p>
+        <div class="vcard tilt shine"><span class="ai-badge">AI Video</span>
+          <video autoplay muted loop playsinline preload="metadata" poster="assets/video/2.jpg"><source src="assets/video/2.mp4" type="video/mp4"/></video>
+          <div class="vcard-cap">
+            <p class="vcard-title">Delicate proteins, every service</p>
+            <p class="vcard-sub">Airflow Management holding an even 100 °C across a full load of fish.</p>
           </div>
         </div>
 
-        <div class="vcard tilt shine"><span class="ai-badge">AI Video · Concept</span>
-          <img src="assets/lifestyle/service-design.jpg" alt="" loading="lazy">
-          <div class="vcard-body">
-            <span class="play-btn"></span>
-            <p class="vcard-title">Inside the service-friendly design</p>
-            <p class="vcard-sub">An animated cutaway of the two service ports and Plug&amp;Play components.</p>
+        <div class="vcard tilt shine"><span class="ai-badge">AI Video</span>
+          <video autoplay muted loop playsinline preload="metadata" poster="assets/video/3.jpg"><source src="assets/video/3.mp4" type="video/mp4"/></video>
+          <div class="vcard-cap">
+            <p class="vcard-title">Inside the chamber</p>
+            <p class="vcard-sub">A slow push into the cooking space — airflow, hygienic corners and the sealed door glass.</p>
           </div>
         </div>
 
-        <div class="vcard tilt shine"><span class="ai-badge">AI Video · Concept</span>
-          <img src="assets/lifestyle/vegetables.jpg" alt="" loading="lazy">
-          <div class="vcard-body">
-            <span class="play-btn"></span>
-            <p class="vcard-title">Press&amp;Go in real time</p>
-            <p class="vcard-sub">Screen-recording of the 7" glass touch display, narrated for first-time operators.</p>
+        <div class="vcard tilt shine"><span class="ai-badge">AI Video</span>
+          <video autoplay muted loop playsinline preload="metadata" poster="assets/video/4.jpg"><source src="assets/video/4.mp4" type="video/mp4"/></video>
+          <div class="vcard-cap">
+            <p class="vcard-title">Peak service, handled</p>
+            <p class="vcard-sub">Full trays out, next load in — the 7 PM rush without a drop in quality.</p>
           </div>
         </div>
 
-        <div class="vcard tilt shine"><span class="ai-badge">AI Video · Concept</span>
-          <img src="assets/lifestyle/cost.jpg" alt="" loading="lazy">
-          <div class="vcard-body">
-            <span class="play-btn"></span>
-            <p class="vcard-title">What ConvoClean saves you</p>
-            <p class="vcard-sub">Water, power and labour, visualised — the running-cost story dealers keep asking for.</p>
+        <div class="vcard tilt shine"><span class="ai-badge">AI Video</span>
+          <video autoplay muted loop playsinline preload="metadata" poster="assets/video/5.jpg"><source src="assets/video/5.mp4" type="video/mp4"/></video>
+          <div class="vcard-cap">
+            <p class="vcard-title">Service, any time, any place</p>
+            <p class="vcard-sub">Online diagnostics and a worldwide partner network standing behind every unit.</p>
           </div>
         </div>
 
-        <div class="vcard tilt shine"><span class="ai-badge">AI Video · Concept</span>
-          <img src="assets/lifestyle/fish.jpg" alt="" loading="lazy">
-          <div class="vcard-body">
-            <span class="play-btn"></span>
-            <p class="vcard-title">Tabletop vs floor-standing</p>
-            <p class="vcard-sub">A 20-second explainer that routes 6.10/10.10 and 20.10/20.20 buyers to the right model.</p>
+        <div class="vcard tilt shine"><span class="ai-badge">AI Video</span>
+          <video autoplay muted loop playsinline preload="metadata" poster="assets/video/6.jpg"><source src="assets/video/6.mp4" type="video/mp4"/></video>
+          <div class="vcard-cap">
+            <p class="vcard-title">Baking where the customer can see it</p>
+            <p class="vcard-sub">Small-format, front-of-house baking for cafés and snack counters.</p>
           </div>
         </div>
 
       </div>
-      <p class="ph-cap">Six AI video concepts, storyboarded on Convotherm's own maxx photography — films to be produced</p>
+      <p class="ph-cap">Six AI-generated product films — five seconds each, produced without a studio kitchen, a crew or a food stylist</p>
     </div>
 
     <!-- AI still-image direction -->
