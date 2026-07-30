@@ -66,11 +66,7 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
 /* ── AI video tiles ── */
 .vcard{position:relative;border-radius:16px;overflow:hidden;border:1px solid rgba(0,0,0,.1);background:#0F0F0F;aspect-ratio:16/9;box-shadow:0 20px 50px rgba(0,0,0,.22);transition:transform .55s cubic-bezier(.34,1.4,.64,1),box-shadow .55s ease,border-color .4s ease}
 .vcard:hover{border-color:rgba(200,16,46,.6);box-shadow:0 32px 70px rgba(0,0,0,.32)}
-.vcard>video{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s cubic-bezier(.34,1.3,.64,1)}
-.vcard:hover>video{transform:scale(1.04)}
-.vcard-cap{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:44px 18px 15px;pointer-events:none;background:linear-gradient(to top,rgba(8,8,8,.94) 0%,rgba(8,8,8,.62) 48%,transparent 100%)}
-.vcard-title{color:#fff;font-weight:700;font-size:1.02rem;letter-spacing:-.01em}
-.vcard-sub{color:rgba(255,255,255,.72);font-size:.79rem;margin-top:4px;line-height:1.5}
+.vcard>video{width:100%;height:100%;object-fit:cover;display:block}
 .ai-badge{position:absolute;top:11px;left:11px;z-index:4;font-size:8px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#fff;background:#C8102E;padding:4px 9px;border-radius:5px}
 
 /* AI still-image tiles */
@@ -312,50 +308,26 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
 
         <div class="vcard tilt shine"><span class="ai-badge">AI Video</span>
           <video autoplay muted loop playsinline preload="metadata" poster="assets/video/1.jpg"><source src="assets/video/1.mp4" type="video/mp4"/></video>
-          <div class="vcard-cap">
-            <p class="vcard-title">A bakery's whole morning, in one load</p>
-            <p class="vcard-sub">BakePro and Crisp&amp;Tasty doing the work — the maxx as the engine room behind the counter.</p>
-          </div>
         </div>
 
         <div class="vcard tilt shine"><span class="ai-badge">AI Video</span>
           <video autoplay muted loop playsinline preload="metadata" poster="assets/video/2.jpg"><source src="assets/video/2.mp4" type="video/mp4"/></video>
-          <div class="vcard-cap">
-            <p class="vcard-title">Delicate proteins, every service</p>
-            <p class="vcard-sub">Airflow Management holding an even 100 °C across a full load of fish.</p>
-          </div>
         </div>
 
         <div class="vcard tilt shine"><span class="ai-badge">AI Video</span>
           <video autoplay muted loop playsinline preload="metadata" poster="assets/video/3.jpg"><source src="assets/video/3.mp4" type="video/mp4"/></video>
-          <div class="vcard-cap">
-            <p class="vcard-title">Inside the chamber</p>
-            <p class="vcard-sub">A slow push into the cooking space — airflow, hygienic corners and the sealed door glass.</p>
-          </div>
         </div>
 
         <div class="vcard tilt shine"><span class="ai-badge">AI Video</span>
           <video autoplay muted loop playsinline preload="metadata" poster="assets/video/4.jpg"><source src="assets/video/4.mp4" type="video/mp4"/></video>
-          <div class="vcard-cap">
-            <p class="vcard-title">Peak service, handled</p>
-            <p class="vcard-sub">Full trays out, next load in — the 7 PM rush without a drop in quality.</p>
-          </div>
         </div>
 
         <div class="vcard tilt shine"><span class="ai-badge">AI Video</span>
           <video autoplay muted loop playsinline preload="metadata" poster="assets/video/5.jpg"><source src="assets/video/5.mp4" type="video/mp4"/></video>
-          <div class="vcard-cap">
-            <p class="vcard-title">Service, any time, any place</p>
-            <p class="vcard-sub">Online diagnostics and a worldwide partner network standing behind every unit.</p>
-          </div>
         </div>
 
         <div class="vcard tilt shine"><span class="ai-badge">AI Video</span>
           <video autoplay muted loop playsinline preload="metadata" poster="assets/video/6.jpg"><source src="assets/video/6.mp4" type="video/mp4"/></video>
-          <div class="vcard-cap">
-            <p class="vcard-title">Baking where the customer can see it</p>
-            <p class="vcard-sub">Small-format, front-of-house baking for cafés and snack counters.</p>
-          </div>
         </div>
 
       </div>
