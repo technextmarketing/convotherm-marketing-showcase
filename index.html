@@ -69,22 +69,6 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
 .vcard>video{width:100%;height:100%;object-fit:cover;display:block}
 .ai-badge{position:absolute;top:11px;left:11px;z-index:4;font-size:8px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#fff;background:#C8102E;padding:4px 9px;border-radius:5px}
 
-/* AI still-image tiles */
-.ai-tile{position:relative;border-radius:14px;overflow:hidden;border:1px solid rgba(0,0,0,.09);aspect-ratio:1/1;background:linear-gradient(160deg,#FFFFFF,#EFEFEF);box-shadow:0 14px 36px rgba(0,0,0,.14);transition:transform .55s cubic-bezier(.34,1.4,.64,1),box-shadow .55s ease,border-color .4s ease}
-.ai-tile:hover{border-color:rgba(200,16,46,.5);box-shadow:0 26px 56px rgba(0,0,0,.22)}
-.ai-tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.34,1.3,.64,1)}
-.ai-tile.contain img{object-fit:contain;padding:16px}
-.ai-tile:hover img{transform:scale(1.06)}
-.ai-cap{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:30px 13px 12px;background:linear-gradient(to top,rgba(10,10,10,.94),transparent);color:#fff;font-size:.74rem;letter-spacing:.02em;transform:translateY(101%);opacity:0;transition:transform .45s cubic-bezier(.34,1.3,.64,1),opacity .4s ease}
-.ai-tile:hover .ai-cap{transform:translateY(0);opacity:1}
-
-/* Model strip */
-.model-card{background:linear-gradient(170deg,#FFFFFF,#EFEFEF);border:1px solid rgba(0,0,0,.08);border-radius:16px;padding:22px 18px 18px;text-align:center;transition:transform .45s cubic-bezier(.34,1.4,.64,1),box-shadow .45s ease,border-color .35s ease}
-.model-card:hover{transform:translateY(-6px);border-color:rgba(200,16,46,.5);box-shadow:0 24px 54px rgba(0,0,0,.16)}
-.model-card img{height:170px;width:auto;margin:0 auto 14px;object-fit:contain;display:block}
-.model-name{font-weight:800;font-size:1.05rem;color:#1A1A1A;letter-spacing:-.01em}
-.model-kind{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#C8102E;font-weight:700;margin-top:5px}
-
 /* Continuous float + shine */
 @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 .float{animation:floaty 6s ease-in-out infinite}
@@ -201,22 +185,11 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
         <div class="ov-ic">
           <svg width="30" height="30" fill="none" stroke="#C8102E" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><circle cx="18.5" cy="5" r=".9" fill="#F26173"/><circle cx="5.5" cy="18" r=".9" fill="#F26173"/></svg>
         </div>
-        <h3 class="text-2xl font-extrabold mb-2 text-white">AI Video &amp; Image Generation</h3>
+        <h3 class="text-2xl font-extrabold mb-2 text-white">AI Video Generation</h3>
         <p class="text-base" style="color:rgba(255,255,255,.6)">Product films and application visuals produced fast — without booking a studio kitchen.</p>
         <span class="inline-flex items-center gap-2 mt-4 text-xs font-semibold" style="color:#F26173">Explore <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></span>
       </a>
 
-    </div>
-
-    <!-- Model strip -->
-    <div class="mt-16 reveal">
-      <p class="text-center text-[11px] tracking-[.3em] uppercase mb-7" style="color:rgba(255,255,255,.45)">The Range We're Marketing</p>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
-        <div class="model-card tilt"><img src="assets/product/maxx-6-10.png" alt="Convotherm maxx 6.10 combi oven" loading="lazy"><p class="model-name">maxx 6.10</p><p class="model-kind">Tabletop</p></div>
-        <div class="model-card tilt"><img src="assets/product/maxx-10-10.png" alt="Convotherm maxx 10.10 combi oven" loading="lazy"><p class="model-name">maxx 10.10</p><p class="model-kind">Tabletop</p></div>
-        <div class="model-card tilt"><img src="assets/product/maxx-20-10.png" alt="Convotherm maxx 20.10 combi oven" loading="lazy"><p class="model-name">maxx 20.10</p><p class="model-kind">Floor-standing · New</p></div>
-        <div class="model-card tilt"><img src="assets/product/maxx-20-20.png" alt="Convotherm maxx 20.20 combi oven" loading="lazy"><p class="model-name">maxx 20.20</p><p class="model-kind">Floor-standing · New</p></div>
-      </div>
     </div>
   </div>
 </section>
@@ -287,11 +260,11 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
   </div>
 </section>
 
-<!-- 02 AI VIDEO & IMAGE GENERATION -->
+<!-- 02 AI VIDEO GENERATION -->
 <section id="ai" class="focus-sec" style="background:#F7F7F7">
   <div class="max-w-6xl mx-auto">
     <div class="text-center mb-4 reveal">
-      <p class="focus-eyebrow" style="color:#C8102E">02 · AI Video &amp; Image Generation</p>
+      <p class="focus-eyebrow" style="color:#C8102E">02 · AI Video Generation</p>
       <h2 class="focus-h flow flow-l mt-3 mb-4">Studio-Quality Content, Without the Studio</h2>
       <div class="orange-bar mx-auto mb-6"></div>
       <p class="max-w-2xl mx-auto mb-7" style="color:#444444;font-size:1.2rem;line-height:1.8">Every film below was generated with AI — no test kitchen, no crew, no food stylist. That is the whole argument: application footage for all four maxx models and every Function Management, at a fraction of the usual cost and turnaround.</p>
@@ -332,22 +305,6 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
 
       </div>
       <p class="ph-cap">Six AI-generated product films — five seconds each, produced without a studio kitchen, a crew or a food stylist</p>
-    </div>
-
-    <!-- AI still-image direction -->
-    <div class="relative reveal mt-16">
-      <p class="text-center text-[11px] tracking-[.3em] uppercase mb-7" style="color:#8A8A8A">Visual Direction for AI Stills</p>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
-        <div class="ai-tile tilt"><img src="assets/lifestyle/baking.jpg" alt="Baking application" loading="lazy"><span class="ai-cap">Application: bakery &amp; pastry</span></div>
-        <div class="ai-tile tilt contain"><img src="assets/product/maxx-10-10.png" alt="maxx 10.10 hero render" loading="lazy"><span class="ai-cap">Hero render: maxx 10.10</span></div>
-        <div class="ai-tile tilt"><img src="assets/lifestyle/vegetables.jpg" alt="Vegetable application" loading="lazy"><span class="ai-cap">Application: steaming &amp; sides</span></div>
-        <div class="ai-tile tilt"><img src="assets/lifestyle/meat.jpg" alt="Meat application" loading="lazy"><span class="ai-cap">Application: roasting &amp; grilling</span></div>
-        <div class="ai-tile tilt"><img src="assets/lifestyle/fish.jpg" alt="Fish application" loading="lazy"><span class="ai-cap">Application: delicate proteins</span></div>
-        <div class="ai-tile tilt contain"><img src="assets/product/maxx-20-20.png" alt="maxx 20.20 hero render" loading="lazy"><span class="ai-cap">Hero render: maxx 20.20</span></div>
-        <div class="ai-tile tilt"><img src="assets/lifestyle/service-team.jpg" alt="Service partner" loading="lazy"><span class="ai-cap">People: service partners</span></div>
-        <div class="ai-tile tilt contain"><img src="assets/mgmt/managements.png" alt="Function Managements" loading="lazy"><span class="ai-cap">Diagram: Function Managements</span></div>
-      </div>
-      <p class="ph-cap">Reference frames from Convotherm's library — the look and framing every AI-generated still would match</p>
     </div>
   </div>
 </section>
