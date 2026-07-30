@@ -91,7 +91,7 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
 .shine{position:relative;overflow:hidden}
 .shine::before{content:'';position:absolute;top:0;left:-130%;width:55%;height:100%;background:linear-gradient(105deg,transparent 20%,rgba(255,255,255,.18) 50%,transparent 80%);transform:skewX(-18deg);transition:left .8s ease;pointer-events:none;z-index:6}
 .shine:hover::before{left:170%}
-@media(prefers-reduced-motion:reduce){.float,.play-btn{animation:none}}
+@media(prefers-reduced-motion:reduce){.float{animation:none}}
 </style>
 </head>
 <body>
