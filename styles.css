@@ -31,8 +31,8 @@ p,li,td,th{line-height:1.85}
 .hero-bg{background-color:#0A0A0A;position:relative}
 .hero-bg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 65% at 50% -5%,rgba(200,16,46,.12) 0%,transparent 65%);pointer-events:none;z-index:2}
 .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none}
-.hero-overlay{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to bottom,rgba(6,9,22,.92) 0%,rgba(8,11,24,.68) 42%,rgba(6,10,20,.94) 100%)}
-.hero-overlay::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 45%,transparent 40%,rgba(5,8,18,.60) 100%)}
+.hero-overlay{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to bottom,rgba(8,8,8,.92) 0%,rgba(10,10,10,.68) 42%,rgba(8,8,8,.94) 100%)}
+.hero-overlay::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 45%,transparent 40%,rgba(6,6,6,.60) 100%)}
 .dot-bg{background-image:radial-gradient(circle,rgba(200,16,46,.08) 1px,transparent 1px);background-size:32px 32px}
 
 /* Grid pattern */
@@ -73,7 +73,7 @@ p,li,td,th{line-height:1.85}
 .img-card{position:relative;border-radius:12px;overflow:hidden;border:1px solid rgba(200,16,46,.18);background:#141414;box-shadow:0 12px 34px rgba(0,0,0,.4);transition:transform .45s cubic-bezier(.34,1.4,.64,1),box-shadow .45s ease,border-color .35s ease}
 .img-card img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
 .img-card:hover{transform:translateY(-7px);border-color:rgba(200,16,46,.55);box-shadow:0 26px 56px rgba(0,0,0,.55),0 0 0 1px rgba(200,16,46,.20)}
-.img-card .vlabel{position:absolute;left:0;right:0;bottom:0;padding:30px 18px 16px;background:linear-gradient(to top,rgba(4,7,18,.9),transparent);color:#fff;font-family:'Open Sans',sans-serif;font-size:1rem;font-weight:500;letter-spacing:.01em;pointer-events:none}
+.img-card .vlabel{position:absolute;left:0;right:0;bottom:0;padding:30px 18px 16px;background:linear-gradient(to top,rgba(6,6,6,.9),transparent);color:#fff;font-family:'Open Sans',sans-serif;font-size:1rem;font-weight:500;letter-spacing:.01em;pointer-events:none}
 .img-card .vbadge{position:absolute;top:13px;left:13px;z-index:2;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#fff;background:linear-gradient(135deg,#96091F,#E12742);padding:4px 10px;border-radius:4px;font-weight:700;font-family:'Open Sans',sans-serif}
 
 /* Brand cards (on dark sections) */
