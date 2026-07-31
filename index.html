@@ -35,9 +35,9 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
 .bchip .dot{width:6px;height:6px;border-radius:50%;background:#C8102E}
 
 /* Overview cards */
-.ov-card{position:relative;border-radius:18px;padding:34px 28px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);overflow:hidden;cursor:pointer;transition:transform .5s cubic-bezier(.34,1.4,.64,1),box-shadow .5s ease,border-color .4s ease,background .4s ease}
-.ov-card:hover{background:rgba(200,16,46,.07);border-color:rgba(200,16,46,.55);box-shadow:0 28px 64px rgba(0,0,0,.55)}
-.ov-ic{width:62px;height:62px;border-radius:16px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(200,16,46,.2),rgba(200,16,46,.04));border:1px solid rgba(200,16,46,.4);margin-bottom:20px;transition:transform .5s cubic-bezier(.34,1.6,.64,1)}
+.ov-card{position:relative;border-radius:18px;padding:34px 28px;background:#FFFFFF;border:1px solid rgba(10,10,10,.09);box-shadow:0 10px 30px rgba(10,10,10,.06);overflow:hidden;cursor:pointer;transition:transform .5s cubic-bezier(.34,1.4,.64,1),box-shadow .5s ease,border-color .4s ease,background .4s ease}
+.ov-card:hover{background:#FFFFFF;border-color:rgba(200,16,46,.45);box-shadow:0 26px 58px rgba(10,10,10,.13)}
+.ov-ic{width:62px;height:62px;border-radius:16px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(200,16,46,.13),rgba(200,16,46,.03));border:1px solid rgba(200,16,46,.32);margin-bottom:20px;transition:transform .5s cubic-bezier(.34,1.6,.64,1)}
 .ov-card:hover .ov-ic{transform:translateY(-4px) scale(1.08) rotate(-4deg)}
 .ov-num{position:absolute;top:16px;right:22px;font-family:'Open Sans',sans-serif;font-weight:800;letter-spacing:-.03em;font-size:2.1rem;color:rgba(200,16,46,.3);transition:color .4s ease}
 .ov-card:hover .ov-num{color:rgba(200,16,46,.75)}
@@ -47,20 +47,20 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
 .ph-cap{text-align:center;font-size:.88rem;margin-top:22px;color:#8A8A8A;letter-spacing:.03em}
 
 /* ── Social post cards ── */
-.post-card{position:relative;background:#141414;border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;transition:transform .55s cubic-bezier(.34,1.4,.64,1),box-shadow .55s ease,border-color .4s ease}
-.post-card:hover{border-color:rgba(200,16,46,.6);box-shadow:0 26px 58px rgba(0,0,0,.55)}
+.post-card{position:relative;background:#FFFFFF;border:1px solid rgba(10,10,10,.09);box-shadow:0 10px 30px rgba(10,10,10,.06);border-radius:16px;overflow:hidden;transition:transform .55s cubic-bezier(.34,1.4,.64,1),box-shadow .55s ease,border-color .4s ease}
+.post-card:hover{border-color:rgba(200,16,46,.45);box-shadow:0 26px 58px rgba(10,10,10,.14)}
 .post-head{display:flex;align-items:center;gap:10px;padding:13px 15px}
 .post-ava{width:38px;height:38px;border-radius:50%;flex-shrink:0;overflow:hidden;border:1px solid rgba(200,16,46,.4);background:#fff;display:flex;align-items:center;justify-content:center}
 .post-ava img{width:78%;height:auto;object-fit:contain;display:block}
-.post-plat{margin-left:auto;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#F26173;border:1px solid rgba(200,16,46,.45);border-radius:5px;padding:3px 8px}
-.post-media{background:#fff;border-block:1px solid rgba(255,255,255,.08);overflow:hidden;line-height:0;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center}
+.post-plat{margin-left:auto;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#C8102E;border:1px solid rgba(200,16,46,.45);border-radius:5px;padding:3px 8px}
+.post-media{background:#fff;border-block:1px solid rgba(10,10,10,.07);overflow:hidden;line-height:0;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center}
 .post-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.34,1.3,.64,1)}
 .post-card:hover .post-media img{transform:scale(1.05)}
-.pname{font-size:12px;font-weight:700;color:#fff;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.phandle{font-size:10px;color:rgba(255,255,255,.42);line-height:1.2}
-.post-cap{padding:11px 15px 0;font-size:11.5px;line-height:1.55;color:rgba(255,255,255,.62)}
-.post-cap b{color:#F26173;font-weight:600}
-.post-foot{display:flex;gap:20px;padding:11px 16px 13px;color:rgba(242,97,115,.6);border-top:1px solid rgba(255,255,255,.07);margin-top:11px}
+.pname{font-size:12px;font-weight:700;color:#1A1A1A;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.phandle{font-size:10px;color:#8A8A8A;line-height:1.2}
+.post-cap{padding:11px 15px 0;font-size:11.5px;line-height:1.55;color:#555555}
+.post-cap b{color:#C8102E;font-weight:600}
+.post-foot{display:flex;gap:20px;padding:11px 16px 13px;color:rgba(200,16,46,.55);border-top:1px solid rgba(10,10,10,.07);margin-top:11px}
 .post-card:hover .post-foot svg:hover{transform:scale(1.25)}
 .post-foot svg{transition:transform .3s ease}
 /* ── AI video tiles ── */
@@ -73,7 +73,7 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
 @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 .float{animation:floaty 6s ease-in-out infinite}
 .shine{position:relative;overflow:hidden}
-.shine::before{content:'';position:absolute;top:0;left:-130%;width:55%;height:100%;background:linear-gradient(105deg,transparent 20%,rgba(255,255,255,.18) 50%,transparent 80%);transform:skewX(-18deg);transition:left .8s ease;pointer-events:none;z-index:6}
+.shine::before{content:'';position:absolute;top:0;left:-130%;width:55%;height:100%;background:linear-gradient(105deg,transparent 20%,rgba(255,255,255,.55) 50%,transparent 80%);transform:skewX(-18deg);transition:left .8s ease;pointer-events:none;z-index:6}
 .shine:hover::before{left:170%}
 @media(prefers-reduced-motion:reduce){.float{animation:none}}
 </style>
@@ -84,10 +84,10 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
 <button id="toTop" aria-label="Back to top"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg></button>
 
 <!-- NAV -->
-<nav class="fixed top-0 left-0 right-0 z-50 px-6 lg:px-12 py-4" id="nav" style="background:rgba(10,10,10,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.12)">
+<nav class="fixed top-0 left-0 right-0 z-50 px-6 lg:px-12 py-4" id="nav" style="background:rgba(255,255,255,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(10,10,10,.10)">
   <div class="max-w-6xl mx-auto flex items-center justify-between relative">
     <a href="https://www.convotherm.com/combiovens/maxx" target="_blank" rel="noopener" style="text-decoration:none;display:flex;align-items:center">
-      <img src="assets/logo/convotherm-white.svg" alt="Convotherm" style="height:30px;width:auto">
+      <img src="assets/logo/convotherm-color.svg" alt="Convotherm" style="height:30px;width:auto">
     </a>
     <div id="navLinks" class="flex items-center gap-4 md:gap-8">
       <a href="index.html" class="nav-page nav-current">Showcase</a>
@@ -110,7 +110,7 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
       Digital Marketing Showcase · 2026
     </div>
     <p class="text-white/55 text-[11px] tracking-[.3em] uppercase mb-5">A Showcase for</p>
-    <h1 class="font-extrabold leading-[1.06] mb-7" style="font-family:'Open Sans',sans-serif;letter-spacing:-.02em">
+    <h1 class="font-extrabold leading-[1.06] mb-7" style="font-family:'Open Sans',sans-serif;letter-spacing:-.02em;color:#fff">
       <span class="flow flow-d">Convotherm maxx</span><br>
       <em class="font-normal orange-anim not-italic">Combi Ovens</em>
     </h1>
@@ -160,13 +160,13 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
 </div>
 
 <!-- OVERVIEW -->
-<section id="overview" class="py-24 px-6" style="background:#0A0A0A">
+<section id="overview" class="py-24 px-6" style="background:#FFFFFF">
   <div class="max-w-6xl mx-auto">
     <div class="text-center mb-16 reveal">
-      <p class="label-ornament text-[11px] tracking-[.3em] uppercase mb-4" style="color:#F26173">What We'll Focus On</p>
-      <h2 class="focus-h flow flow-d mb-5">Two Ways to Grow Convotherm maxx Online</h2>
+      <p class="label-ornament text-[11px] tracking-[.3em] uppercase mb-4" style="color:#C8102E">What We'll Focus On</p>
+      <h2 class="focus-h flow flow-l mb-5">Two Ways to Grow Convotherm maxx Online</h2>
       <div class="orange-bar mx-auto mb-6"></div>
-      <p class="text-white/65 max-w-2xl mx-auto" style="font-size:1.2rem">A visual-first digital strategy built around two high-impact pillars — turning premium German engineering into online visibility, dealer demand and qualified enquiries.</p>
+      <p class="max-w-2xl mx-auto" style="font-size:1.2rem;color:#555555">A visual-first digital strategy built around two high-impact pillars — turning premium German engineering into online visibility, dealer demand and qualified enquiries.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
@@ -175,9 +175,9 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
         <div class="ov-ic">
           <svg width="30" height="30" fill="none" stroke="#C8102E" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="#F26173"/></svg>
         </div>
-        <h3 class="text-2xl font-extrabold mb-2 text-white">Social Media Posting</h3>
-        <p class="text-base" style="color:rgba(255,255,255,.6)">On-brand posts that keep the maxx visible to chefs, operators and dealers between trade shows.</p>
-        <span class="inline-flex items-center gap-2 mt-4 text-xs font-semibold" style="color:#F26173">Explore <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></span>
+        <h3 class="text-2xl font-extrabold mb-2" style="color:#1A1A1A">Social Media Posting</h3>
+        <p class="text-base" style="color:#555555">On-brand posts that keep the maxx visible to chefs, operators and dealers between trade shows.</p>
+        <span class="inline-flex items-center gap-2 mt-4 text-xs font-semibold" style="color:#C8102E">Explore <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></span>
       </a>
 
       <a href="#ai" class="ov-card reveal-s d2 block" style="text-decoration:none">
@@ -185,9 +185,9 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
         <div class="ov-ic">
           <svg width="30" height="30" fill="none" stroke="#C8102E" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><circle cx="18.5" cy="5" r=".9" fill="#F26173"/><circle cx="5.5" cy="18" r=".9" fill="#F26173"/></svg>
         </div>
-        <h3 class="text-2xl font-extrabold mb-2 text-white">AI Video Generation</h3>
-        <p class="text-base" style="color:rgba(255,255,255,.6)">Product films and application visuals produced fast — without booking a studio kitchen.</p>
-        <span class="inline-flex items-center gap-2 mt-4 text-xs font-semibold" style="color:#F26173">Explore <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></span>
+        <h3 class="text-2xl font-extrabold mb-2" style="color:#1A1A1A">AI Video Generation</h3>
+        <p class="text-base" style="color:#555555">Product films and application visuals produced fast — without booking a studio kitchen.</p>
+        <span class="inline-flex items-center gap-2 mt-4 text-xs font-semibold" style="color:#C8102E">Explore <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></span>
       </a>
 
     </div>
@@ -261,7 +261,7 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
 </section>
 
 <!-- 02 AI VIDEO GENERATION -->
-<section id="ai" class="focus-sec" style="background:#F7F7F7">
+<section id="ai" class="focus-sec" style="background:#FFFFFF">
   <div class="max-w-6xl mx-auto">
     <div class="text-center mb-4 reveal">
       <p class="focus-eyebrow" style="color:#C8102E">02 · AI Video Generation</p>
@@ -310,19 +310,19 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
 </section>
 
 <!-- CLOSING -->
-<section class="py-24 px-6 relative" style="background:linear-gradient(160deg,#141414,#0A0A0A)">
+<section class="py-24 px-6 relative" style="background:linear-gradient(165deg,#FFFFFF 0%,#F2F2F2 100%)">
   <div class="absolute inset-0 dot-bg opacity-30"></div>
   <div class="max-w-3xl mx-auto text-center relative z-10 reveal">
-    <p class="label-ornament text-[11px] tracking-[.3em] uppercase mb-5" style="color:#F26173">The Vision</p>
-    <h2 class="focus-h flow flow-d reflect mb-6">Social. AI Content. One Brand, Everywhere.</h2>
-    <p class="text-white/70 max-w-2xl mx-auto" style="font-size:1.25rem;line-height:1.8">
+    <p class="label-ornament text-[11px] tracking-[.3em] uppercase mb-5" style="color:#C8102E">The Vision</p>
+    <h2 class="focus-h flow flow-l reflect mb-6">Social. AI Content. One Brand, Everywhere.</h2>
+    <p class="max-w-2xl mx-auto" style="font-size:1.25rem;line-height:1.8;color:#555555">
       Together, these two pillars put German engineering in front of the right buyers — consistently, professionally, and at scale. For the market context behind this strategy, see the
-      <a href="market-research.html" style="color:#F26173;text-decoration:underline;text-underline-offset:3px">marketing research</a>.
+      <a href="market-research.html" style="color:#C8102E;text-decoration:underline;text-underline-offset:3px">marketing research</a>.
     </p>
     <div class="mt-12 flex items-center justify-center gap-8 opacity-60">
-      <img src="assets/logo/convotherm-white.svg" alt="Convotherm" style="height:26px;width:auto">
-      <span style="width:1px;height:30px;background:rgba(255,255,255,.2);display:block"></span>
-      <img src="assets/logo/welbilt-white.svg" alt="Welbilt" style="height:30px;width:auto">
+      <img src="assets/logo/convotherm-color.svg" alt="Convotherm" style="height:26px;width:auto">
+      <span style="width:1px;height:30px;background:rgba(10,10,10,.18);display:block"></span>
+      <img src="assets/logo/welbilt-white.svg" alt="Welbilt" style="height:30px;width:auto;filter:brightness(0)">
     </div>
   </div>
 </section>

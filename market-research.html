@@ -15,31 +15,36 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
 <link rel="stylesheet" href="styles.css?v=1"/>
 <style>
 /* ── Page-specific ── */
-.mr-hero{background:linear-gradient(160deg,#050505 0%,#141414 50%,#0A0A0A 100%);min-height:48vh;display:flex;align-items:center;padding:120px 24px 72px;position:relative;overflow:hidden}
+.mr-hero{background:linear-gradient(165deg,#FFFFFF 0%,#F7F7F7 55%,#F0F0F0 100%);min-height:48vh;display:flex;align-items:center;padding:120px 24px 72px;position:relative;overflow:hidden}
 .mr-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 50% 0%,rgba(200,16,46,.14) 0%,transparent 65%);pointer-events:none}
 
 .mr-h{font-family:'Open Sans',sans-serif;font-weight:800;font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.08;letter-spacing:-.015em}
 .mr-eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;font-weight:700}
 
 /* Stat tiles */
-.stat-tile{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:22px;text-align:center}
-.stat-tile .n{font-family:'Open Sans',sans-serif;font-weight:800;letter-spacing:-.03em;font-size:2.1rem;color:#F26173;line-height:1;display:block}
-.stat-tile .l{font-size:.7rem;color:rgba(255,255,255,.45);letter-spacing:.06em;text-transform:uppercase;margin-top:8px;display:block;line-height:1.5}
+.stat-tile{background:#FFFFFF;border:1px solid rgba(10,10,10,.09);box-shadow:0 8px 24px rgba(10,10,10,.05);border-radius:14px;padding:22px;text-align:center}
+.stat-tile .n{font-family:'Open Sans',sans-serif;font-weight:800;letter-spacing:-.03em;font-size:2.1rem;color:#C8102E;line-height:1;display:block}
+.stat-tile .l{font-size:.7rem;color:#8A8A8A;letter-spacing:.06em;text-transform:uppercase;margin-top:8px;display:block;line-height:1.5}
 
 /* Channel presence cards */
-.chan-card{position:relative;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:22px;transition:transform .4s cubic-bezier(.34,1.4,.64,1),border-color .3s ease,box-shadow .4s ease}
-.chan-card:hover{transform:translateY(-4px);border-color:rgba(200,16,46,.5);box-shadow:0 16px 40px rgba(0,0,0,.45)}
+.chan-card{position:relative;background:#FFFFFF;border:1px solid rgba(10,10,10,.09);box-shadow:0 8px 24px rgba(10,10,10,.05);border-radius:16px;padding:22px;transition:transform .4s cubic-bezier(.34,1.4,.64,1),border-color .3s ease,box-shadow .4s ease}
+.chan-card:hover{transform:translateY(-4px);border-color:rgba(200,16,46,.45);box-shadow:0 18px 42px rgba(10,10,10,.12)}
 .chan-ic{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;background:rgba(200,16,46,.1);border:1px solid rgba(200,16,46,.3)}
 .chan-status{position:absolute;top:20px;right:20px;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;padding:4px 9px;border-radius:6px}
-.st-live{color:#8fdcaa;background:rgba(120,200,150,.12);border:1px solid rgba(120,200,150,.32)}
-.st-weak{color:#e7c98a;background:rgba(230,190,90,.1);border:1px solid rgba(230,190,90,.3)}
-.st-none{color:#F26173;background:rgba(200,16,46,.12);border:1px solid rgba(200,16,46,.4)}
-.chan-name{font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:3px}
-.chan-meta{font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.6}
-.chan-handle{font-size:.72rem;color:#F26173;margin-top:8px;word-break:break-all}
+.st-live{color:#2E7D4F;background:rgba(46,125,79,.1);border:1px solid rgba(46,125,79,.32)}
+.st-weak{color:#8A6A16;background:rgba(180,140,40,.1);border:1px solid rgba(180,140,40,.34)}
+.st-none{color:#C8102E;background:rgba(200,16,46,.1);border:1px solid rgba(200,16,46,.4)}
+
+/* Hero accents re-tuned for the light background */
+.mr-hero .hero-badge-pill{color:#96091F;background:rgba(200,16,46,.08);border-color:rgba(200,16,46,.32)}
+.mr-hero .badge-dot{background:#C8102E}
+.mr-hero .orange-anim{background-image:linear-gradient(90deg,#7A0A19,#96091F,#C8102E,#E12742,#96091F,#7A0A19)}
+.chan-name{font-size:1.05rem;font-weight:700;color:#1A1A1A;margin-bottom:3px}
+.chan-meta{font-size:.8rem;color:#555555;line-height:1.6}
+.chan-handle{font-size:.72rem;color:#C8102E;margin-top:8px;word-break:break-all}
 
 /* Score meter */
-.meter{height:12px;border-radius:8px;background:rgba(255,255,255,.07);overflow:hidden}
+.meter{height:12px;border-radius:8px;background:rgba(10,10,10,.08);overflow:hidden}
 .meter-fill{height:100%;border-radius:8px;background:linear-gradient(90deg,#C8102E,#F26173);width:0;transition:width 1.4s cubic-bezier(.2,.7,.3,1)}
 .in-view .meter-fill{width:var(--w)}
 
@@ -49,16 +54,16 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
 .opp-num{font-family:'Open Sans',sans-serif;font-weight:800;letter-spacing:-.03em;font-size:2.1rem;color:rgba(200,16,46,.4);line-height:1}
 
 /* Fact row */
-.fact-row{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.fact-row{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid rgba(10,10,10,.08)}
 .fact-row:last-child{border-bottom:none}
-.fact-k{font-size:.82rem;color:rgba(255,255,255,.5);flex-shrink:0}
-.fact-v{font-size:.86rem;color:#fff;text-align:right;font-weight:500}
+.fact-k{font-size:.82rem;color:#777777;flex-shrink:0}
+.fact-v{font-size:.86rem;color:#1A1A1A;text-align:right;font-weight:500}
 
-.src{display:inline-block;font-size:.68rem;color:rgba(242,97,115,.75);border:1px solid rgba(200,16,46,.3);border-radius:4px;padding:2px 7px;margin-left:4px;vertical-align:middle}
+.src{display:inline-block;font-size:.68rem;color:#96091F;border:1px solid rgba(200,16,46,.3);border-radius:4px;padding:2px 7px;margin-left:4px;vertical-align:middle}
 .callout{background:linear-gradient(135deg,rgba(200,16,46,.1),rgba(200,16,46,.03));border-left:3px solid #C8102E;border-radius:0 12px 12px 0;padding:16px 22px;margin:24px 0}
 .chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:6px 14px;border-radius:99px;margin:0 6px 8px 0;border:1px solid rgba(200,16,46,.35)}
-.srclist a{color:#F26173;text-decoration:underline;text-underline-offset:2px}
-.srclist li{font-size:.82rem;color:rgba(255,255,255,.55);padding:6px 0}
+.srclist a{color:#C8102E;text-decoration:underline;text-underline-offset:2px}
+.srclist li{font-size:.82rem;color:#555555;padding:6px 0}
 </style>
 </head>
 <body>
@@ -67,10 +72,10 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
 <button id="toTop" aria-label="Back to top"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg></button>
 
 <!-- NAV -->
-<nav class="fixed top-0 left-0 right-0 z-50 px-6 lg:px-12 py-4" id="nav" style="background:rgba(10,10,10,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.12)">
+<nav class="fixed top-0 left-0 right-0 z-50 px-6 lg:px-12 py-4" id="nav" style="background:rgba(255,255,255,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(10,10,10,.10)">
   <div class="max-w-6xl mx-auto flex items-center justify-between relative">
     <a href="https://www.convotherm.com/combiovens/maxx" target="_blank" rel="noopener" style="text-decoration:none;display:flex;align-items:center">
-      <img src="assets/logo/convotherm-white.svg" alt="Convotherm" style="height:30px;width:auto">
+      <img src="assets/logo/convotherm-color.svg" alt="Convotherm" style="height:30px;width:auto">
     </a>
     <div id="navLinks" class="flex items-center gap-4 md:gap-8">
       <a href="index.html" class="nav-page">Showcase</a>
@@ -88,11 +93,11 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
       <span class="badge-dot"></span>
       Marketing Research · Market &amp; Channel Context
     </div>
-    <h1 class="text-white mr-h mb-5 reveal">
+    <h1 class="mr-h mb-5 reveal" style="color:#1A1A1A">
       The Convotherm maxx<br>
       <em class="not-italic orange-anim">Opportunity, Mapped</em>
     </h1>
-    <p class="text-white/60 max-w-2xl reveal" style="font-size:1.1rem;line-height:1.8">
+    <p class="max-w-2xl reveal" style="color:#555555;font-size:1.1rem;line-height:1.8">
       The market context behind the two-pillar showcase — how fast the combi oven category is growing, who the maxx is up against, and where a value-premium German brand wins attention online.
     </p>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 reveal">
@@ -101,63 +106,63 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
       <div class="stat-tile"><span class="n">10.9%</span><span class="l">Asia-Pacific CAGR — fastest region</span></div>
       <div class="stat-tile"><span class="n">4</span><span class="l">maxx models to take to market</span></div>
     </div>
-    <p class="text-white/35 text-[11px] mt-5 reveal">Market figures: Mordor Intelligence and Persistence Market Research, 2026 editions. Full sources at the foot of this page.</p>
+    <p class="text-[11px] mt-5 reveal" style="color:#8A8A8A">Market figures: Mordor Intelligence and Persistence Market Research, 2026 editions. Full sources at the foot of this page.</p>
   </div>
 </section>
 
 <!-- 01 MARKET CONTEXT -->
-<section id="market" class="py-24 px-6" style="background:#0A0A0A">
+<section id="market" class="py-24 px-6" style="background:#FFFFFF">
   <div class="max-w-6xl mx-auto">
     <div class="text-center mb-14 reveal">
-      <p class="label-ornament mr-eyebrow mb-4" style="color:#F26173">01 · Market Context</p>
-      <h2 class="text-white mr-h mb-4" style="font-size:clamp(1.8rem,3.5vw,2.8rem)">A Category Growing Faster Than the Kitchens It Serves</h2>
+      <p class="label-ornament mr-eyebrow mb-4" style="color:#C8102E">01 · Market Context</p>
+      <h2 class="mr-h mb-4" style="color:#1A1A1A;font-size:clamp(1.8rem,3.5vw,2.8rem)">A Category Growing Faster Than the Kitchens It Serves</h2>
       <div class="orange-bar mx-auto mb-5"></div>
-      <p class="text-white/55 max-w-2xl mx-auto" style="font-size:1rem">Combi ovens are no longer a premium indulgence — energy cost, labour shortage and menu flexibility are pushing them into mid-market kitchens. That is precisely the buyer the maxx was designed for.</p>
+      <p class="max-w-2xl mx-auto" style="color:#555555;font-size:1rem">Combi ovens are no longer a premium indulgence — energy cost, labour shortage and menu flexibility are pushing them into mid-market kitchens. That is precisely the buyer the maxx was designed for.</p>
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-      <div class="panel panel-d reveal-l">
-        <p class="mr-eyebrow mb-6" style="color:#F26173">Market Size · USD Billions</p>
+      <div class="panel panel-l reveal-l">
+        <p class="mr-eyebrow mb-6" style="color:#C8102E">Market Size · USD Billions</p>
         <div class="bars">
-          <div class="bar"><i style="--h:41%"></i><b class="text-white">$2.04B</b><small class="text-white/60">2025</small></div>
-          <div class="bar"><i style="--h:43%"></i><b class="text-white">$2.14B</b><small class="text-white/60">2026</small></div>
-          <div class="bar"><i style="--h:52%"></i><b class="text-white">$2.6B</b><small class="text-white/60">2028e</small></div>
-          <div class="bar"><i style="--h:66%"></i><b class="text-white">$3.29B</b><small class="text-white/60">2031e</small></div>
+          <div class="bar"><i style="--h:41%"></i><b style="color:#1A1A1A">$2.04B</b><small style="color:#666666">2025</small></div>
+          <div class="bar"><i style="--h:43%"></i><b style="color:#1A1A1A">$2.14B</b><small style="color:#666666">2026</small></div>
+          <div class="bar"><i style="--h:52%"></i><b style="color:#1A1A1A">$2.6B</b><small style="color:#666666">2028e</small></div>
+          <div class="bar"><i style="--h:66%"></i><b style="color:#1A1A1A">$3.29B</b><small style="color:#666666">2031e</small></div>
         </div>
-        <p class="chart-note text-white">Mordor Intelligence · commercial combi ovens, 2026 edition <span class="src">S1</span></p>
+        <p class="chart-note" style="color:#555555">Mordor Intelligence · commercial combi ovens, 2026 edition <span class="src">S1</span></p>
       </div>
 
-      <div class="panel panel-d reveal-r">
-        <p class="mr-eyebrow mb-6" style="color:#F26173">What's Driving the Growth</p>
+      <div class="panel panel-l reveal-r">
+        <p class="mr-eyebrow mb-6" style="color:#C8102E">What's Driving the Growth</p>
         <div class="hbars">
           <div>
-            <div class="hb-top"><span class="text-white/80">Energy &amp; running-cost pressure</span><span class="text-white/50">Primary driver</span></div>
+            <div class="hb-top"><span style="color:#1A1A1A">Energy &amp; running-cost pressure</span><span style="color:#777777">Primary driver</span></div>
             <div class="hb-track"><div class="hb-fill" style="--w:92%"></div></div>
           </div>
           <div>
-            <div class="hb-top"><span class="text-white/80">Labour shortage → automation</span><span class="text-white/50">High</span></div>
+            <div class="hb-top"><span style="color:#1A1A1A">Labour shortage → automation</span><span style="color:#777777">High</span></div>
             <div class="hb-track"><div class="hb-fill" style="--w:84%"></div></div>
           </div>
           <div>
-            <div class="hb-top"><span class="text-white/80">QSR &amp; snack-business expansion</span><span class="text-white/50">High</span></div>
+            <div class="hb-top"><span style="color:#1A1A1A">QSR &amp; snack-business expansion</span><span style="color:#777777">High</span></div>
             <div class="hb-track"><div class="hb-fill" style="--w:78%"></div></div>
           </div>
           <div>
-            <div class="hb-top"><span class="text-white/80">Hygiene &amp; auto-cleaning compliance</span><span class="text-white/50">Moderate</span></div>
+            <div class="hb-top"><span style="color:#1A1A1A">Hygiene &amp; auto-cleaning compliance</span><span style="color:#777777">Moderate</span></div>
             <div class="hb-track"><div class="hb-fill" style="--w:64%"></div></div>
           </div>
           <div>
-            <div class="hb-top"><span class="text-white/80">Connected-kitchen &amp; data management</span><span class="text-white/50">Emerging</span></div>
+            <div class="hb-top"><span style="color:#1A1A1A">Connected-kitchen &amp; data management</span><span style="color:#777777">Emerging</span></div>
             <div class="hb-track"><div class="hb-fill" style="--w:52%"></div></div>
           </div>
         </div>
-        <p class="chart-note text-white">Relative weighting from published market-driver commentary <span class="src">S1 S2 S3</span></p>
+        <p class="chart-note" style="color:#555555">Relative weighting from published market-driver commentary <span class="src">S1 S2 S3</span></p>
       </div>
     </div>
 
     <div class="callout reveal">
-      <p class="text-white/80" style="font-size:1rem;line-height:1.8">
-        Every one of those drivers already has a maxx answer — <strong style="color:#F26173">ConvoClean</strong>, <strong style="color:#F26173">Press&amp;Go</strong>, <strong style="color:#F26173">energy-efficient glazing</strong>, <strong style="color:#F26173">WiFi/LAN connectivity</strong>. The gap is not the product. It is how often the market hears about it.
+      <p class="" style="color:#555555;font-size:1rem;line-height:1.8">
+        Every one of those drivers already has a maxx answer — <strong style="color:#C8102E">ConvoClean</strong>, <strong style="color:#C8102E">Press&amp;Go</strong>, <strong style="color:#C8102E">energy-efficient glazing</strong>, <strong style="color:#C8102E">WiFi/LAN connectivity</strong>. The gap is not the product. It is how often the market hears about it.
       </p>
     </div>
   </div>
@@ -224,13 +229,13 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
 </section>
 
 <!-- 03 CHANNEL FOOTPRINT -->
-<section id="footprint" class="py-24 px-6" style="background:#0A0A0A">
+<section id="footprint" class="py-24 px-6" style="background:#FFFFFF">
   <div class="max-w-6xl mx-auto">
     <div class="text-center mb-14 reveal">
-      <p class="label-ornament mr-eyebrow mb-4" style="color:#F26173">03 · Channel Footprint</p>
-      <h2 class="text-white mr-h mb-4" style="font-size:clamp(1.8rem,3.5vw,2.8rem)">Where the Brand Already Shows Up</h2>
+      <p class="label-ornament mr-eyebrow mb-4" style="color:#C8102E">03 · Channel Footprint</p>
+      <h2 class="mr-h mb-4" style="color:#1A1A1A;font-size:clamp(1.8rem,3.5vw,2.8rem)">Where the Brand Already Shows Up</h2>
       <div class="orange-bar mx-auto mb-5"></div>
-      <p class="text-white/55 max-w-2xl mx-auto" style="font-size:1rem">The channels exist. What is missing is a maxx-specific, always-on content engine running across them — which is exactly what the two pillars deliver.</p>
+      <p class="max-w-2xl mx-auto" style="color:#555555;font-size:1rem">The channels exist. What is missing is a maxx-specific, always-on content engine running across them — which is exactly what the two pillars deliver.</p>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -258,8 +263,8 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
     </div>
 
     <!-- Buyer journey -->
-    <div class="panel panel-d mt-8 reveal">
-      <p class="mr-eyebrow mb-6" style="color:#F26173">How a Combi Oven Actually Gets Bought</p>
+    <div class="panel panel-l mt-8 reveal">
+      <p class="mr-eyebrow mb-6" style="color:#C8102E">How a Combi Oven Actually Gets Bought</p>
       <div class="funnel">
         <div class="fn-row" style="--w:100%"><span>Trigger — new site, refit, or an oven that failed mid-service</span><span>Awareness</span></div>
         <div class="fn-row" style="--w:84%"><span>Search &amp; social — "best combi oven for…"</span><span>Discovery</span></div>
@@ -267,7 +272,7 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
         <div class="fn-row" style="--w:46%"><span>Demo / test kitchen with a dealer</span><span>Validation</span></div>
         <div class="fn-row" style="--w:30%"><span>Quotation and install</span><span>Purchase</span></div>
       </div>
-      <p class="chart-note text-white">Illustrative journey for considered-purchase foodservice equipment — used to place content, not to forecast volume</p>
+      <p class="chart-note" style="color:#555555">Illustrative journey for considered-purchase foodservice equipment — used to place content, not to forecast volume</p>
     </div>
   </div>
 </section>
@@ -304,9 +309,9 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
 </section>
 
 <!-- SOURCES -->
-<section class="py-16 px-6" style="background:#0A0A0A">
+<section class="py-16 px-6" style="background:#FFFFFF">
   <div class="max-w-4xl mx-auto reveal">
-    <p class="mr-eyebrow mb-5" style="color:#F26173">Sources</p>
+    <p class="mr-eyebrow mb-5" style="color:#C8102E">Sources</p>
     <ul class="srclist" style="list-style:none;padding:0;border-top:1px solid rgba(255,255,255,.08)">
       <li style="border-bottom:1px solid rgba(255,255,255,.06)"><span class="src">S1</span> Mordor Intelligence — <a href="https://www.mordorintelligence.com/industry-reports/commercial-combi-ovens-market" target="_blank" rel="noopener">Commercial Combi Ovens Market Size &amp; Share, 2025–2031</a>. USD 2.04B (2025), 2.14B (2026), 3.29B (2031), 8.98% CAGR. The 2028 figure shown in the chart is interpolated on that CAGR, not a published data point.</li>
       <li style="border-bottom:1px solid rgba(255,255,255,.06)"><span class="src">S2</span> Persistence Market Research — <a href="https://www.persistencemarketresearch.com/market-research/commercial-combi-oven-market.asp" target="_blank" rel="noopener">Commercial Combi Oven Market</a>. USD 2.7B (2026) to 5.2B (2033), 9.9% CAGR; Asia-Pacific fastest at 10.9%.</li>
@@ -314,7 +319,7 @@ tailwind.config={theme:{extend:{colors:{coal:{'DEFAULT':'#0A0A0A','light':'#1414
       <li style="border-bottom:1px solid rgba(255,255,255,.06)"><span class="src">S4</span> Convotherm — <a href="https://www.convotherm.com/combiovens/maxx" target="_blank" rel="noopener">maxx series combi ovens</a>. All product claims, model line-up, imagery and brand language.</li>
       <li><span class="src">S5</span> Convotherm official channels: <a href="https://www.linkedin.com/company/convotherm" target="_blank" rel="noopener">LinkedIn</a>, <a href="https://www.instagram.com/convotherm_official/" target="_blank" rel="noopener">Instagram</a>, <a href="https://www.facebook.com/Convotherm/" target="_blank" rel="noopener">Facebook</a>.</li>
     </ul>
-    <p class="text-white/30 text-[11px] mt-6">Analyst estimates differ on category scope — figures above are quoted as published rather than reconciled. Share-of-voice and buyer-journey weightings are TechNext estimates for planning purposes, clearly labelled as such.</p>
+    <p class="text-[11px] mt-6" style="color:#999999">Analyst estimates differ on category scope — figures above are quoted as published rather than reconciled. Share-of-voice and buyer-journey weightings are TechNext estimates for planning purposes, clearly labelled as such.</p>
   </div>
 </section>
 

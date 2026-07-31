@@ -33,7 +33,7 @@ function onScroll(){
   var h=document.documentElement.scrollHeight-window.innerHeight;
   if(prog)prog.style.width=(h>0?(st/h*100):0)+'%';
   if(toTop)toTop.classList.toggle('show',st>600);
-  if(nav)nav.style.background= st>40 ? 'rgba(10,10,10,.9)' : 'rgba(10,10,10,.55)';
+  if(nav)nav.style.background= st>40 ? 'rgba(255,255,255,.95)' : 'rgba(255,255,255,.82)';
   var cur='';
   sections.forEach(function(s){ if(st>=s.offsetTop-140) cur=s.id; });
   navLinks.forEach(function(a){ a.classList.toggle('nav-active', a.getAttribute('href')==='#'+cur); });
